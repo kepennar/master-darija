@@ -9,7 +9,13 @@ export default ({ onOpenMenu }) =>
     <Toolbar>
       <Toolbar.Row>
         <Toolbar.Section align-start={true}>
-            <Toolbar.Title className={style.flagTitle} onClick={() => onOpenMenu(true)} />
+          <Toolbar.Title
+            className={style.flagTitle}
+            onClick={evt => {
+              evt.preventDefault();
+              onOpenMenu(true);
+            }}
+          />
         </Toolbar.Section>
         <Toolbar.Section align-start={true}>
           <Toolbar.Title className={style.title}>Master Darija</Toolbar.Title>

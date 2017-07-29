@@ -7,16 +7,18 @@ import categories from '../../services/Categories';
 import style from './style';
 
 export default class Menu extends Component {
+  drawerRef = (drawer) =>  {
+    this.drawer = drawer;
+  }
   componentDidUpdate() {
     this.drawer.MDComponent.open = this.props.open;
   }
   render({ open, onOpenMenu }) {
+    
     return (
       <div>
-        <Drawer.TemporaryDrawer
-          ref={drawer => {
-            this.drawer = drawer;
-          }}
+        <Drawer.TemporaryDrawer className="mdc-typography mdc-temporary-drawer"
+          ref={this.drawerRef}
         >
           <MenuItem
             route="/"
