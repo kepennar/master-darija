@@ -4,17 +4,20 @@ import Drawer from 'preact-material-components/Drawer';
 import List from 'preact-material-components/List';
 import { route as goTo } from 'preact-router';
 
-import 'preact-material-components/List/style.css';
-
-export default ({ route, label, icon, onClick }) =>
+export default ({ route, label, icon, svg, onClick }) =>
   <Drawer.DrawerItem
     onClick={() => {
       goTo(route);
       onClick();
     }}
   >
-    <List.ItemIcon>
-      {icon}
-    </List.ItemIcon>
+    {icon &&
+      <List.ItemIcon>
+        {icon}
+      </List.ItemIcon>}
+    {svg &&
+      <List.ItemIcon>
+        <img src={svg} />
+      </List.ItemIcon>}
     {label}
   </Drawer.DrawerItem>;

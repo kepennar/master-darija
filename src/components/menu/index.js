@@ -2,7 +2,9 @@ import { h, Component } from 'preact';
 import Drawer from 'preact-material-components/Drawer';
 import MenuItem from './menu-item';
 
-import 'preact-material-components/Drawer/style.css';
+import categories from '../../services/Categories';
+
+import style from './style';
 
 export default class Menu extends Component {
   componentDidUpdate() {
@@ -16,9 +18,6 @@ export default class Menu extends Component {
             this.drawer = drawer;
           }}
         >
-          <Drawer.TemporaryDrawerHeader className="mdc-theme--primary-bg">
-            Categories
-          </Drawer.TemporaryDrawerHeader>
           <MenuItem
             route="/"
             label="Home"
@@ -26,17 +25,22 @@ export default class Menu extends Component {
             onClick={() => onOpenMenu(false)}
           />
           <MenuItem
-            route="/eat"
-            label="Eat"
-            icon="restaurant_menu"
+            route="/credits"
+            label="Credits"
+            icon="people"
             onClick={() => onOpenMenu(false)}
           />
-          <MenuItem
-            route="/family"
-            label="Family"
-            icon="persons"
-            onClick={() => onOpenMenu(false)}
-          />
+          <Drawer.TemporaryDrawerHeader className={style.header}>
+            Categories
+          </Drawer.TemporaryDrawerHeader>
+          {categories.map(({ label, svg, name }) =>
+            <MenuItem
+              route={`/words/${name}`}
+              label={label}
+              svg={svg}
+              onClick={() => onOpenMenu(false)}
+            />
+          )}
         </Drawer.TemporaryDrawer>
       </div>
     );

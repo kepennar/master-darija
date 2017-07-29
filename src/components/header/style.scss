@@ -1,12 +1,11 @@
 @import '../../style/_colors';
 
 .toolbar {
-  --mdc-theme-primary: $morocco-green;
 
   .flagTitle {
     min-height: 70px;
     width: 105px;
-    background: url('../../assets/morroco.svg') no-repeat;
+    background: url('../..//assets/morroco.svg') no-repeat;
     background-size: cover;
     margin-left: 0;
     cursor: pointer;
@@ -15,7 +14,6 @@
     font-weight: bold;
     font-size: 25px;
     text-shadow: 1px 1px 5px $morocco-green;
-    color: $morocco-red;
   }
 
   a.active {

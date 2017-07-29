@@ -1,0 +1,22 @@
+@import '../../style/colors';
+
+.words {
+  padding: 56px 20px;
+  min-height: 100%;
+  width: 100%;
+
+  .picto {
+    max-width: 100px;
+  }
+	
+	.list {
+		border: 1px solid #eee;
+		background-color: $secondary-background-color;
+    max-width: 200px;
+    margin: 16px 0;
+    overflow: hidden;
+	}
+	.listItem:not(:last-child) {
+		border-bottom: 1px solid gray;
+	}
+}
