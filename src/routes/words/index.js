@@ -6,7 +6,7 @@ import Player from '../../components/player';
 import style from './style';
 
 import categories from '../../services/Categories';
-import wordsRegistry from '../../services/Words';
+import wordsRegistry from '../../services/words';
 
 export default class Words extends Component {
   constructor(props) {
