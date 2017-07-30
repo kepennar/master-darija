@@ -5,8 +5,9 @@
   .flagTitle {
     min-height: 70px;
     width: 105px;
-    background: url('../..//assets/morroco.svg') no-repeat;
+    background: url('../../assets/morroco.svg') no-repeat;
     background-size: cover;
+    box-shadow: 1px -1px 4px $morocco-red;
     margin-left: 0;
     cursor: pointer;
   }

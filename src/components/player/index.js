@@ -17,6 +17,13 @@ export default class Player extends Component {
     super(props);
     this.state = { isPlaying: false };
   }
+
+  componentWillUpdate({ stopIt }) {
+    if (stopIt && this.state.isPlaying) {
+      this.stop();
+    }
+  }
+
   togglePlay() {
     const { isPlaying } = this.state;
     if (isPlaying) {
@@ -29,6 +36,7 @@ export default class Player extends Component {
 
   play() {
     this.player.play();
+    this.props.onPlay(this.props.src);
   }
 
   stop() {
@@ -36,35 +44,39 @@ export default class Player extends Component {
     this.player.currentTime = 0;
   }
 
-  render({ src, arabic, darija, english, className}) {
+  render({ src, words: { arabic, darija, english }, className, stopIt }) {
     return (
-      <List.Item className={className}>
-        <List.TextContainer>
-          <List.PrimaryText>
-            <IconToggle
-              role="button"
-              tabindex="0"
-              aria-pressed="false"
-              aria-label="Add to favorites"
-              data-toggle-on={toggleOnIcon}
-              data-toggle-off={toggleOffIcon}
-              onClick={() => this.togglePlay()}
-            >
-              play_circle_outline
-            </IconToggle>
-            <audio
-              ref={ref => (this.player = ref)}
-              src={src}
-              class={style.player}
-              preload="auto"
-              autoPlay={false}
-            />
-          </List.PrimaryText>
-          <List.SecondaryText>
-            {arabic} - {darija} - {english}
-          </List.SecondaryText>
-        </List.TextContainer>
-      </List.Item>
+      <div class={className}>
+        <IconToggle
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          aria-label="Add to favorites"
+          data-toggle-on={toggleOnIcon}
+          data-toggle-off={toggleOffIcon}
+          onClick={() => this.togglePlay()}
+        >
+          play_circle_outline
+        </IconToggle>
+        <audio
+          ref={ref => (this.player = ref)}
+          src={src}
+          class={style.player}
+          preload="auto"
+          autoPlay={false}
+        />
+        <p>
+          <div>
+          {arabic}
+          </div>
+          <div>
+            {darija}
+          </div>
+          <div>
+            {english}
+          </div>
+        </p>
+      </div>
     );
   }
 }

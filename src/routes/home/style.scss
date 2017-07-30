@@ -1,9 +1,12 @@
+@import '../../style/colors';
+
 .home {
   padding: 56px 20px;
   min-height: 100%;
   width: 100%;
 
   .title {
+    color: $secondary-txt-color;
     text-align: center;
   }
 }

@@ -32,7 +32,7 @@ export default class Menu extends Component {
             icon="people"
             onClick={() => onOpenMenu(false)}
           />
-          <Drawer.TemporaryDrawerHeader className={style.header}>
+          <Drawer.TemporaryDrawerHeader className={`mdc-temporary-drawer__header ${style.header}`}>
             Categories
           </Drawer.TemporaryDrawerHeader>
           {categories.map(({ label, svg, name }) =>

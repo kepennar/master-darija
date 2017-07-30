@@ -1,0 +1,31 @@
+[debug] [2017-07-30T11:07:00.186Z] ----------------------------------------------------------------------
+[debug] [2017-07-30T11:07:00.188Z] Command:      /usr/bin/nodejs /home/kepennar/workspace/OSS/master-darija/node_modules/.bin/firebase deploy
+[debug] [2017-07-30T11:07:00.188Z] CLI Version:  3.9.1
+[debug] [2017-07-30T11:07:00.188Z] Platform:     linux
+[debug] [2017-07-30T11:07:00.188Z] Node Version: v8.2.1
+[debug] [2017-07-30T11:07:00.189Z] Time:         Sun Jul 30 2017 13:07:00 GMT+0200 (CEST)
+[debug] [2017-07-30T11:07:00.189Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-30T11:07:00.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-30T11:07:00.197Z] > authorizing via signed-in user
+[debug] [2017-07-30T11:07:00.198Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-07-30T11:07:00.198Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/rBEWl3EtkIx5ynd9vyv0IsC8yTfh5I9n-SRR0tlMF3U',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jul 30 2017 13:07:00 GMT+0200 (CEST)
+[debug] [2017-07-30T11:07:00.324Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-30T11:07:00.335Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/master-darija  
+ Sun Jul 30 2017 13:07:00 GMT+0200 (CEST)
+[debug] [2017-07-30T11:07:01.738Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-30T11:07:01.739Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/master-darija/tokens  
+ Sun Jul 30 2017 13:07:01 GMT+0200 (CEST)
+[debug] [2017-07-30T11:07:02.651Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'master-darija'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] [2017-07-30T11:07:04.831Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/master-darija/uploads/-KqIAOJl5oFdQqdbXJ8g?fileCount=49&message=  
+ Sun Jul 30 2017 13:07:04 GMT+0200 (CEST)

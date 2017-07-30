@@ -12,6 +12,7 @@ html, body {
 	color: $txt-color;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	--mdc-theme-primary: $sienna;
 }
 
 * {

@@ -6,7 +6,16 @@ import Menu from './menu';
 import Home from '../routes/home';
 import Words from '../routes/words';
 import Credits from '../routes/credits';
-import 'preact-material-components/style.css';
+
+import 'preact-material-components/LayoutGrid/style';
+import 'preact-material-components/Card/style';
+import 'preact-material-components/Toolbar/style';
+import 'preact-material-components/Drawer/style';
+import 'preact-material-components/List/style';
+import 'preact-material-components/IconToggle/style';
+import 'preact-material-components/Button/style';
+import 'preact-material-components/Elevation/style.css';
+
 // import Home from 'async!./home';
 // import Profile from 'async!./profile';
 
