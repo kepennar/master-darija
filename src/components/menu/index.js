@@ -23,13 +23,13 @@ export default class Menu extends Component {
           <MenuItem
             route="/"
             label="Home"
-            icon="home"
+            svg="/assets/icons/home.svg"
             onClick={() => onOpenMenu(false)}
           />
           <MenuItem
             route="/credits"
             label="Credits"
-            icon="people"
+            svg="/assets/icons/peoples.svg"
             onClick={() => onOpenMenu(false)}
           />
           <Drawer.TemporaryDrawerHeader className={`mdc-temporary-drawer__header ${style.header}`}>
