@@ -4,14 +4,6 @@ import List from 'preact-material-components/List';
 
 import style from './style';
 
-const toggleOnIcon = {
-  content: 'play_circle_filled',
-  label: 'Stop'
-};
-const toggleOffIcon = {
-  content: 'play_circle_outline',
-  label: 'Play'
-};
 export default class Player extends Component {
   constructor(props) {
     super(props);
@@ -44,20 +36,19 @@ export default class Player extends Component {
     this.player.currentTime = 0;
   }
 
-  render({ src, words: { arabic, darija, english }, className, stopIt }) {
+  render(
+    { src, words: { arabic, darija, english }, className, stopIt },
+    { isPlaying }
+  ) {
+    const pictoSrc = isPlaying
+      ? '/assets/icons/play-full.svg'
+      : '/assets/icons/play-outline.svg';
     return (
       <div class={className}>
-        <IconToggle
-          role="button"
-          tabindex="0"
-          aria-pressed="false"
-          aria-label="Add to favorites"
-          data-toggle-on={toggleOnIcon}
-          data-toggle-off={toggleOffIcon}
-          onClick={() => this.togglePlay()}
-        >
-          play_circle_outline
-        </IconToggle>
+        <i class={style.control} onClick={() => this.togglePlay()}>
+          <img src={pictoSrc} />
+        </i>
+
         <audio
           ref={ref => (this.player = ref)}
           src={src}
@@ -67,7 +58,7 @@ export default class Player extends Component {
         />
         <p>
           <div>
-          {arabic}
+            {arabic}
           </div>
           <div>
             {darija}
