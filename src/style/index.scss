@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import './colors';
+@import './fonts';
 
 html, body {
 	height: 100%;
@@ -7,7 +8,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	background: $background-color;
-	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-family: 'ralewayregular', arial, sans-serif;
 	font-weight: 400;
 	color: $txt-color;
 	-webkit-font-smoothing: antialiased;

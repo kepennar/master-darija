@@ -1,6 +1,9 @@
 @import '../../style/colors';
 
 .credits {
-  color: $secondary-txt-color;
   background-color: $secondary-background-color;
+
+  h1 {
+    font-family: 'kingthings';
+  }
 }
