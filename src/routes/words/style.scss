@@ -4,7 +4,9 @@
   // padding: 56px 20px;
   min-height: 100%;
   width: 100%;
-
+  .layout {
+    padding: 0 !important;
+  }
   .title {
     h1 {
       font-size: 3em;
@@ -17,22 +19,22 @@
       max-width: 100px;
     }
   }
-  .wordsList {
-    background-color: $secondary-background-color;
-    border: 1px solid #eee;
-    margin: auto;
-    max-width: 800px;
-    min-width: 200px;
-    padding: 2em;
-    width: 100%;
+//   .wordsList {
+//     background-color: $secondary-background-color;
+//     border: 1px solid #eee;
+//     margin: auto;
+//     max-width: 800px;
+//     min-width: 200px;
+//     padding: 2em;
+//     width: 100%;
 
-    .listItem {
-      padding: 10px;
+//     .listItem {
+//       padding: 10px;
 
-      font-size: 1.2em;
-      &:not(:last-child) {
-        border-bottom: 1px solid lightgray;
-      }
-    }
-  }
+//       font-size: 1.2em;
+//       &:not(:last-child) {
+//         border-bottom: 1px solid lightgray;
+//       }
+//     }
+//   }
 }

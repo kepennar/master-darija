@@ -24,8 +24,9 @@
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
+    "hammerjs": "^2.0.8",
     "preact": "^8.2.1",
-    "preact-material-components": "^1.1.0",
+    "preact-material-components": "^1.1.1",
     "preact-router": "^2.5.5"
   }
 }

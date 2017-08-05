@@ -45,7 +45,13 @@ export default class Player extends Component {
       : '/assets/icons/play-outline.svg';
     return (
       <div class={className}>
-        <i class={style.control} onClick={() => this.togglePlay()}>
+        <i
+          class={style.control}
+          onClick={e => {
+            this.togglePlay();
+            e.stopPropagation();
+          }}
+        >
           <img src={pictoSrc} />
         </i>
 

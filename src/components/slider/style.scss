@@ -1,0 +1,23 @@
+@import '../../style/colors';
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+
+  .sliderContainer {
+    display: flex;
+    flex-direction: row;
+    transform-origin: 50% 0;
+    transition: transform .5s ease-out;
+  }
+}
+
+.slide {
+  display: flex;
+
+  .slideContent {
+    padding: 1em;
+    background-color: $secondary-background-color;
+    min-height: 400px;
+  }
+}

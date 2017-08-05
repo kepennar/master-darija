@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import Elevation from 'preact-material-components/Elevation';
 import LayoutGrid from 'preact-material-components/LayoutGrid';
 
+import Slider from '../../components/slider';
 import Player from '../../components/player';
 import style from './style';
 
@@ -16,23 +17,33 @@ export default class Words extends Component {
       stopIt: false
     };
   }
-
+  sliderRef = slider => {
+    this.slider = slider;
+  };
   onPlay = playingId => {
     this.setState({ playingId, stopIt: true });
   };
+
+  componentWillUpdate(nextProps, nextState) {
+    if (this.props.category !== nextProps.category) {
+      this.slider.init();
+    }
+  }
+
   componentDidUpdate() {
     if (this.state.stopIt) {
       this.setState({ stopIt: false });
     }
   }
+
   // Note: `category` comes from the URL, courtesy of our router
-  render({ category }, { stopIt, playingId }) {
+  render({ category }, { containerWidth, stopIt, playingId }) {
     const categoryData = categories.find(({ name }) => name === category);
     const words = wordsRegistry[category];
 
     return (
       <div class={style.words}>
-        <LayoutGrid>
+        <LayoutGrid className={style.layout}>
           <LayoutGrid.Inner>
             <LayoutGrid.Cell cols="12">
               <div class={style.title}>
@@ -43,8 +54,8 @@ export default class Words extends Component {
               </div>
             </LayoutGrid.Cell>
             <LayoutGrid.Cell cols="12" align="middle">
-              <div class={style.wordsList}>
-                <Elevation z1>
+              <div>
+                <Slider ref={this.sliderRef}>
                   {words.map(({ sound, translations }) =>
                     <Player
                       src={sound}
@@ -54,7 +65,7 @@ export default class Words extends Component {
                       className={style.listItem}
                     />
                   )}
-                </Elevation>
+                </Slider>
               </div>
             </LayoutGrid.Cell>
           </LayoutGrid.Inner>
