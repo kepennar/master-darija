@@ -10,9 +10,12 @@ export default class Player extends Component {
     this.state = { isPlaying: false };
   }
 
-  componentWillUpdate({ stopIt }) {
+  componentWillUpdate({ stopIt, play }) {
     if (stopIt && this.state.isPlaying) {
       this.stop();
+    } else if (play) {
+      this.player.play();
+      this.setState({ isPlaying: true });
     }
   }
 
@@ -27,8 +30,7 @@ export default class Player extends Component {
   }
 
   play() {
-    this.player.play();
-    this.props.onPlay(this.props.src);
+    this.props.onPlay(this.props.soundSrc);
   }
 
   stop() {

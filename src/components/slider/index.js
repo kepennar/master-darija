@@ -39,12 +39,16 @@ export default class Slider extends Component {
 
   previousSlide() {
     if (this.state.currentSlideIndex !== 0) {
-      this.setState({ currentSlideIndex: this.state.currentSlideIndex - 1 });
+      const newSlideIndex = this.state.currentSlideIndex - 1;
+      this.setState({ currentSlideIndex: newSlideIndex });
+      this.props.onSlideChange(newSlideIndex);
     }
   }
   nextSlide() {
     if (this.state.currentSlideIndex !== this.props.children.length - 1) {
-      this.setState({ currentSlideIndex: this.state.currentSlideIndex + 1 });
+      const newSlideIndex = this.state.currentSlideIndex + 1;
+      this.setState({ currentSlideIndex: newSlideIndex });
+      this.props.onSlideChange(newSlideIndex);
     }
   }
 

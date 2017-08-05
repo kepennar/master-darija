@@ -13,7 +13,7 @@ export default [
       darija: 'Banan',
       english: 'Banana'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test2.mp3'
   },
   {
     translations: {
@@ -29,7 +29,7 @@ export default [
       darija: 'Khokh',
       english: 'Peach'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test2.mp3'
   },
   {
     translations: {
@@ -45,7 +45,7 @@ export default [
       darija: 'Fraise',
       english: 'Strawberry'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test2.mp3'
   },
   {
     translations: {

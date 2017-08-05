@@ -18,16 +18,33 @@ export default class Words extends Component {
       stopIt: false
     };
   }
+
+  componentWillMount() {
+    this.words = wordsRegistry[this.props.category];
+  }
+
   sliderRef = slider => {
     this.slider = slider;
   };
+
   onPlay = playingId => {
-    this.setState({ playingId, stopIt: true });
+    this._changePlayingId(playingId);
   };
 
+  onWordChange = index => {
+    const word = this.words[index];
+    this._changePlayingId(word.sound);
+  };
+
+  _changePlayingId(playingId) {
+    this.setState({ playingId, stopIt: true });
+  }
+
   componentWillUpdate(nextProps, nextState) {
-    if (this.props.category !== nextProps.category) {
+    const nextCategory = nextProps.category;
+    if (this.props.category !== nextCategory) {
       this.slider.init();
+      this.words = wordsRegistry[nextCategory];
     }
   }
 
@@ -38,9 +55,8 @@ export default class Words extends Component {
   }
 
   // Note: `category` comes from the URL, courtesy of our router
-  render({ category }, { containerWidth, stopIt, playingId }) {
+  render({ category }, { stopIt, playingId }) {
     const categoryData = categories.find(({ name }) => name === category);
-    const words = wordsRegistry[category];
 
     return (
       <div class={style.words}>
@@ -48,13 +64,14 @@ export default class Words extends Component {
           <LayoutGrid.Inner>
             <LayoutGrid.Cell cols="12" align="middle">
               <div>
-                <Slider ref={this.sliderRef}>
-                  {words.map(({ sound, translations, image }) =>
+                <Slider ref={this.sliderRef} onSlideChange={this.onWordChange}>
+                  {this.words.map(({ sound, translations, image }) =>
                     <Word
                       soundSrc={sound}
                       translations={translations}
                       imgSrc={image}
                       onPlay={this.onPlay}
+                      play={playingId === sound}
                       stopIt={stopIt && playingId !== sound}
                       className={style.listItem}
                     />

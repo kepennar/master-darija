@@ -1,6 +1,6 @@
-const MIN_SLIDE_WIDTH = 300; // px
-const RESPONSIVE_SLIDE_WIDTH_PERCENT = 80; // %
-const EXCEED_PERCENT = 5; // %
+const MIN_SLIDE_WIDTH = 100; // px
+const RESPONSIVE_SLIDE_WIDTH_PERCENT = 70; // %
+const EXCEED_PERCENT = 10; // %
 
 export const slideStyle = index => {
   const windowWidth = window.innerWidth;
