@@ -1,0 +1,32 @@
+@import '../../../style/colors';
+@import '../../../style/variables';
+
+$translations-font: 1.5em;
+
+.container {
+  text-align: center;
+  .img {
+    border-radius: 50%;
+    box-shadow: $shadow;
+    height: 20vh;
+    margin: auto;
+    width: 20vh;
+  }
+  .texts {
+    font-size: $translations-font;
+    padding: 1em;
+
+    > div {
+      margin-top: 5px;
+    }
+    .emphase {
+      font-size: $translations-font * 1.5;
+    }
+  }
+  @media (min-width: 840px) {
+    .img {
+      height: 30vh;
+      width: 30vh;
+    }
+  }
+}

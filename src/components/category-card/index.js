@@ -6,7 +6,7 @@ import { route } from 'preact-router';
 import style from './style';
 
 export default ({ name, pictoUrl, url }) =>
-  <LayoutGrid.Cell cols="6">
+  <LayoutGrid.Cell cols="4">
     <Card className={style.categoryCard}>
       <Card.Primary>
         <Card.Title large>

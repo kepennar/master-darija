@@ -14,16 +14,28 @@ export default class Slider extends Component {
   }
 
   sliderRef = slider => {
-    this.slider = slider;
-    this._hammer = _hammer(this.slider);
-    this._hammer.on('swipe', evt => {
-      if (evt.direction === 2) {
-        this.nextSlide();
-      } else if (evt.direction === 4) {
-        this.previousSlide();
-      }
-    });
+    if (this._hammer) {
+      this._unregisterHammer();
+    }
+    if (slider) {
+      this._hammer = _hammer(slider);
+      this._hammer.on('swipe', evt => {
+        if (evt.direction === 2) {
+          this.nextSlide();
+        } else if (evt.direction === 4) {
+          this.previousSlide();
+        }
+      });
+    }
   };
+
+  _unregisterHammer() {
+    if (this._hammer) {
+      this._hammer.stop();
+      this._hammer.destroy();
+    }
+    this._hammer = null;
+  }
 
   previousSlide() {
     if (this.state.currentSlideIndex !== 0) {
@@ -48,11 +60,7 @@ export default class Slider extends Component {
   componentWillUnmount() {
     window.removeEventListener('orientationchange', this.forceReRender);
     window.removeEventListener('resize', this.forceReRender);
-    if (this._hammer) {
-      this._hammer.stop();
-      this._hammer.destroy();
-    }
-    this._hammer = null;
+    this._unregisterHammer();
   }
 
   init() {

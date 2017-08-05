@@ -36,10 +36,7 @@ export default class Player extends Component {
     this.player.currentTime = 0;
   }
 
-  render(
-    { src, words: { arabic, darija, english }, className, stopIt },
-    { isPlaying }
-  ) {
+  render({ soundSrc, className, stopIt }, { isPlaying }) {
     const pictoSrc = isPlaying
       ? '/assets/icons/play-full.svg'
       : '/assets/icons/play-outline.svg';
@@ -57,22 +54,11 @@ export default class Player extends Component {
 
         <audio
           ref={ref => (this.player = ref)}
-          src={src}
+          src={soundSrc}
           class={style.player}
           preload="auto"
           autoPlay={false}
         />
-        <p>
-          <div>
-            {arabic}
-          </div>
-          <div>
-            {darija}
-          </div>
-          <div>
-            {english}
-          </div>
-        </p>
       </div>
     );
   }

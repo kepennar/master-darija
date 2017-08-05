@@ -1,24 +1,27 @@
 @import './colors';
 @import './fonts';
 
-html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: $background-color;
-	font-family: 'ralewayregular', arial, sans-serif;
-	font-weight: 400;
-	color: $txt-color;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	--mdc-theme-primary: $sienna;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: $background-color;
+  font-family: 'ralewayregular', arial, sans-serif;
+  font-weight: 400;
+  color: $txt-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --mdc-theme-primary: $sienna;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #app {
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+  height: 100%;
 }

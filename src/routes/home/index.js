@@ -9,10 +9,6 @@ import style from './style';
 
 export default () =>
   <div class={style.home}>
-    <div class={style.title}>
-      <h1>Master Darija</h1>
-      <h2>Here are categories</h2>
-    </div>
     <LayoutGrid>
       <LayoutGrid.Inner>
         {categories.map(({ name, svg }) =>

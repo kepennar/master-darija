@@ -1,0 +1,9 @@
+$player-button-size: 30px;
+.control {
+  cursor: pointer;
+  font-size: 20px;
+  img {
+    width: $player-button-size;
+    height: $player-button-size;
+  }
+}

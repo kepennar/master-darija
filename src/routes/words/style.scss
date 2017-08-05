@@ -1,40 +1,10 @@
 @import '../../style/colors';
 
 .words {
-  // padding: 56px 20px;
-  min-height: 100%;
-  width: 100%;
-  .layout {
-    padding: 0 !important;
-  }
-  .title {
-    h1 {
-      font-size: 3em;
-    }
-
-    color: $secondary-txt-color;
-    text-align: center;
-
-    .picto {
-      max-width: 100px;
-    }
-  }
-//   .wordsList {
-//     background-color: $secondary-background-color;
-//     border: 1px solid #eee;
-//     margin: auto;
-//     max-width: 800px;
-//     min-width: 200px;
-//     padding: 2em;
-//     width: 100%;
-
-//     .listItem {
-//       padding: 10px;
-
-//       font-size: 1.2em;
-//       &:not(:last-child) {
-//         border-bottom: 1px solid lightgray;
-//       }
-//     }
-//   }
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+}
+.layout {
+  padding: 0 !important;
 }

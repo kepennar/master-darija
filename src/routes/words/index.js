@@ -3,11 +3,12 @@ import Elevation from 'preact-material-components/Elevation';
 import LayoutGrid from 'preact-material-components/LayoutGrid';
 
 import Slider from '../../components/slider';
-import Player from '../../components/player';
-import style from './style';
+import Word from '../../components/word';
 
 import categories from '../../services/Categories';
 import wordsRegistry from '../../services/words';
+
+import style from './style';
 
 export default class Words extends Component {
   constructor(props) {
@@ -45,21 +46,14 @@ export default class Words extends Component {
       <div class={style.words}>
         <LayoutGrid className={style.layout}>
           <LayoutGrid.Inner>
-            <LayoutGrid.Cell cols="12">
-              <div class={style.title}>
-                <img class={style.picto} src={categoryData.svg} />
-                <h1>
-                  {categoryData.label}
-                </h1>
-              </div>
-            </LayoutGrid.Cell>
             <LayoutGrid.Cell cols="12" align="middle">
               <div>
                 <Slider ref={this.sliderRef}>
-                  {words.map(({ sound, translations }) =>
-                    <Player
-                      src={sound}
-                      words={translations}
+                  {words.map(({ sound, translations, image }) =>
+                    <Word
+                      soundSrc={sound}
+                      translations={translations}
+                      imgSrc={image}
                       onPlay={this.onPlay}
                       stopIt={stopIt && playingId !== sound}
                       className={style.listItem}
