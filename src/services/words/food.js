@@ -13,7 +13,8 @@ export default [
       darija: 'Banan',
       english: 'Banana'
     },
-    sound: '/assets/word-sounds/food/Banan.mp3'
+    sound: '/assets/word-sounds/food/Banan.mp3',
+    image: '/assets/word-images/food/Banan.jpeg'
   },
   {
     translations: {
@@ -85,7 +86,8 @@ export default [
       darija: '7alib',
       english: 'Milk'
     },
-    sound: '/assets/word-sounds/food/7alib.mp3'
+    sound: '/assets/word-sounds/food/7alib.mp3',
+    image: '/assets/word-images/food/7alib.jpeg'
   },
   {
     translations: {
@@ -101,7 +103,8 @@ export default [
       darija: '3assir limoun',
       english: 'Otange juice'
     },
-    sound: '/assets/word-sounds/food/3assir limoun.mp3'
+    sound: '/assets/word-sounds/food/3assir_limoun.mp3',
+    image: '/assets/word-images/food/3assir_limoun.jpeg'
   },
   {
     translations: {
@@ -141,6 +144,7 @@ export default [
       darija: 'Zitoun',
       english: 'Olive'
     },
-    sound: '/assets/word-sounds/food/Zitoun.mp3'
+    sound: '/assets/word-sounds/food/Zitoun.mp3',
+    image: '/assets/word-images/food/Zitoun.jpeg'
   }
 ];

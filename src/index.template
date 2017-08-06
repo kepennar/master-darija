@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="description" content="Learn Darija words for free - The words are ordered by category (Essentials, family, food, clothes, anatomy, animals, ...) and you'll get sound and translations in English, Arabic and Darija" >
 		<link rel="manifest" href="/manifest.json">
 		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
 			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
