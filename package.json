@@ -9,7 +9,8 @@
     "build": "preact --template src/index.template build",
     "serve": "preact build && preact serve --port 8888",
     "dev": "preact --template src/index.template watch",
-    "deploy": "npm run build && firebase deploy"
+    "copy-seo": "cp -R seo/* build",
+    "deploy": "npm run build && npm run copy-seo && firebase deploy"
   },
   "keywords": [],
   "author": "",

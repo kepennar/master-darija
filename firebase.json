@@ -3,13 +3,13 @@
     "public": "build",
     "rewrites": [
       {
-        "source": "**",
+        "source": "**/!(*.txt|*.xml)",
         "destination": "/index.html"
       }
     ],
     "headers": [
       {
-        "source": "**/*.*",
+        "source": "**/*!(sw.js)",
         "headers": [
           {
             "key": "Cache-Control",
