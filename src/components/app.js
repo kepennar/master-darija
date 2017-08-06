@@ -32,12 +32,19 @@ export default class App extends Component {
     this.setState({ openMenu });
   }
 
+  onRouteChange = ({url}) => {
+    if (typeof window !== 'undefined') {
+      window.ga('set', 'page', url);
+      window.ga('send', 'pageview');
+    }
+  };
+
   render(props, { openMenu }) {
     return (
       <div id="app">
         <Header onOpenMenu={val => this.onOpenMenu(val)} />
         <Menu open={openMenu} onOpenMenu={val => this.onOpenMenu(val)} />
-        <Router>
+        <Router onChange={this.onRouteChange}>
           <Home path="/" />
           <Words path="/words/:category" />
           <Credits path="credits" />

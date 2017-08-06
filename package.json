@@ -6,9 +6,9 @@
   "scripts": {
     "test": "eslint src && preact test",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build",
+    "build": "preact --template src/index.template build",
     "serve": "preact build && preact serve --port 8888",
-    "dev": "preact watch",
+    "dev": "preact --template src/index.template watch",
     "deploy": "npm run build && firebase deploy"
   },
   "keywords": [],
