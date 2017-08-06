@@ -5,7 +5,7 @@ import clothes from './clothes';
 import anatomy from './anatomy';
 import animals from './animals';
 
-export default {
+export const WordsRegistry = {
   essentials,
   family,
   food,

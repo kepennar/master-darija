@@ -2,22 +2,22 @@ import { h, Component } from 'preact';
 import Drawer from 'preact-material-components/Drawer';
 import MenuItem from './menu-item';
 
-import categories from '../../services/Categories';
+import { Categories } from '../../services';
 
 import style from './style';
 
 export default class Menu extends Component {
-  drawerRef = (drawer) =>  {
+  drawerRef = drawer => {
     this.drawer = drawer;
-  }
+  };
   componentDidUpdate() {
     this.drawer.MDComponent.open = this.props.open;
   }
   render({ open, onOpenMenu }) {
-    
     return (
       <div>
-        <Drawer.TemporaryDrawer className="mdc-typography mdc-temporary-drawer"
+        <Drawer.TemporaryDrawer
+          className="mdc-typography mdc-temporary-drawer"
           ref={this.drawerRef}
         >
           <MenuItem
@@ -32,10 +32,12 @@ export default class Menu extends Component {
             svg="/assets/icons/peoples.svg"
             onClick={() => onOpenMenu(false)}
           />
-          <Drawer.TemporaryDrawerHeader className={`mdc-temporary-drawer__header ${style.header}`}>
+          <Drawer.TemporaryDrawerHeader
+            className={`mdc-temporary-drawer__header ${style.header}`}
+          >
             Categories
           </Drawer.TemporaryDrawerHeader>
-          {categories.map(({ label, svg, name }) =>
+          {Categories.map(({ label, svg, name }) =>
             <MenuItem
               route={`/words/${name}`}
               label={label}

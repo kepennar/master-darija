@@ -7,11 +7,10 @@ import style from './style';
 export default class Player extends Component {
   constructor(props) {
     super(props);
-    this.state = { isPlaying: false };
   }
 
   componentWillUpdate({ stopIt, play }) {
-    if (stopIt && this.state.isPlaying) {
+    if (stopIt && this.props.play) {
       this.stop();
     } else if (play) {
       this.player.play();
@@ -20,13 +19,12 @@ export default class Player extends Component {
   }
 
   togglePlay() {
-    const { isPlaying } = this.state;
-    if (isPlaying) {
+    const { play } = this.props;
+    if (play) {
       this.stop();
     } else {
       this.play();
     }
-    this.setState({ isPlaying: !isPlaying });
   }
 
   play() {
@@ -36,10 +34,11 @@ export default class Player extends Component {
   stop() {
     this.player.pause();
     this.player.currentTime = 0;
+    this.props.onEnded(this.props.soundSrc);
   }
 
-  render({ soundSrc, className, stopIt }, { isPlaying }) {
-    const pictoSrc = isPlaying
+  render({ soundSrc, className, stopIt, play, onEnded }, { isPlaying }) {
+    const pictoSrc = play
       ? '/assets/icons/play-full.svg'
       : '/assets/icons/play-outline.svg';
     return (
@@ -60,6 +59,7 @@ export default class Player extends Component {
           class={style.player}
           preload="auto"
           autoPlay={false}
+          onEnded={() => onEnded(soundSrc)}
         />
       </div>
     );

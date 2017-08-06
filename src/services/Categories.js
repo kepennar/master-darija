@@ -1,4 +1,4 @@
-export default [
+export const Categories = [
   {
     name: 'essentials',
     label: 'Essentials',

@@ -5,8 +5,7 @@ import LayoutGrid from 'preact-material-components/LayoutGrid';
 import Slider from '../../components/slider';
 import Word from '../../components/word';
 
-import categories from '../../services/Categories';
-import wordsRegistry from '../../services/words';
+import { Categories, WordsRegistry } from '../../services';
 
 import style from './style';
 
@@ -20,31 +19,14 @@ export default class Words extends Component {
   }
 
   componentWillMount() {
-    this.words = wordsRegistry[this.props.category];
-  }
-
-  sliderRef = slider => {
-    this.slider = slider;
-  };
-
-  onPlay = playingId => {
-    this._changePlayingId(playingId);
-  };
-
-  onWordChange = index => {
-    const word = this.words[index];
-    this._changePlayingId(word.sound);
-  };
-
-  _changePlayingId(playingId) {
-    this.setState({ playingId, stopIt: true });
+    this.words = WordsRegistry[this.props.category];
   }
 
   componentWillUpdate(nextProps, nextState) {
     const nextCategory = nextProps.category;
     if (this.props.category !== nextCategory) {
       this.slider.init();
-      this.words = wordsRegistry[nextCategory];
+      this.words = WordsRegistry[nextCategory];
     }
   }
 
@@ -54,9 +36,35 @@ export default class Words extends Component {
     }
   }
 
+  onPlay = playingId => {
+    this._changeWordPlaying(playingId);
+  };
+
+  onWordChange = index => {
+    const { sound } = this.words[index];
+    this._changeWordPlaying(sound);
+  };
+
+  onEnded = playingId => {
+    if (this.state.playingId === playingId) {
+      this.setState({
+        playingId: null,
+        stopIt: true
+      });
+    }
+  };
+
+  _changeWordPlaying(playingId) {
+    this.setState({ playingId, stopIt: true });
+  }
+
+  _sliderRef = slider => {
+    this.slider = slider;
+  };
+
   // Note: `category` comes from the URL, courtesy of our router
   render({ category }, { stopIt, playingId }) {
-    const categoryData = categories.find(({ name }) => name === category);
+    const categoryData = Categories.find(({ name }) => name === category);
 
     return (
       <div class={style.words}>
@@ -64,7 +72,7 @@ export default class Words extends Component {
           <LayoutGrid.Inner>
             <LayoutGrid.Cell cols="12" align="middle">
               <div>
-                <Slider ref={this.sliderRef} onSlideChange={this.onWordChange}>
+                <Slider ref={this._sliderRef} onSlideChange={this.onWordChange}>
                   {this.words.map(({ sound, translations, image }) =>
                     <Word
                       soundSrc={sound}
@@ -73,6 +81,7 @@ export default class Words extends Component {
                       onPlay={this.onPlay}
                       play={playingId === sound}
                       stopIt={stopIt && playingId !== sound}
+                      onEnded={this.onEnded}
                       className={style.listItem}
                     />
                   )}
