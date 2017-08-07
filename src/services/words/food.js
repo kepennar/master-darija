@@ -5,7 +5,8 @@ export default [
       darija: 'Tefa7',
       english: 'Apple'
     },
-    sound: '/assets/word-sounds/food/Tefa7.mp3'
+    sound: '/assets/word-sounds/food/Tefa7.mp3',
+    image: '/assets/word-images/food/Tefa7.jpeg'
   },
   {
     translations: {
@@ -22,7 +23,8 @@ export default [
       darija: 'Limoun',
       english: 'Orange'
     },
-    sound: '/assets/word-sounds/food/Limoun.mp3'
+    sound: '/assets/word-sounds/food/Limoun.mp3',
+    image: '/assets/word-images/food/Limoun.jpeg'
   },
   {
     translations: {
@@ -30,7 +32,8 @@ export default [
       darija: 'Khokh',
       english: 'Peach'
     },
-    sound: '/assets/word-sounds/food/Khokh.mp3'
+    sound: '/assets/word-sounds/food/Khokh.mp3',
+    image: '/assets/word-images/food/Khokh.jpeg'
   },
   {
     translations: {
@@ -38,7 +41,8 @@ export default [
       darija: 'Dela7',
       english: 'Watermelon'
     },
-    sound: '/assets/word-sounds/food/Dela7.mp3'
+    sound: '/assets/word-sounds/food/Dela7.mp3',
+    image: '/assets/word-images/food/Dela7.jpeg'
   },
   {
     translations: {
@@ -46,7 +50,8 @@ export default [
       darija: 'Fraise',
       english: 'Strawberry'
     },
-    sound: '/assets/word-sounds/food/Fraise.mp3'
+    sound: '/assets/word-sounds/food/Fraise.mp3',
+    image: '/assets/word-images/food/Fraise.jpeg'
   },
   {
     translations: {
@@ -54,7 +59,8 @@ export default [
       darija: 'Khobz',
       english: 'Bread'
     },
-    sound: '/assets/word-sounds/food/Khoubz.mp3'
+    sound: '/assets/word-sounds/food/Khoubz.mp3',
+    image: '/assets/word-images/food/Khoubz.jpeg'
   },
   {
     translations: {
@@ -62,7 +68,8 @@ export default [
       darija: 'Ma',
       english: 'Water'
     },
-    sound: '/assets/word-sounds/food/Ma.mp3'
+    sound: '/assets/word-sounds/food/Ma.mp3',
+    image: '/assets/word-images/food/Ma.jpeg'
   },
   {
     translations: {
@@ -70,7 +77,8 @@ export default [
       darija: 'Atay',
       english: 'Tea'
     },
-    sound: '/assets/word-sounds/food/Atay.mp3'
+    sound: '/assets/word-sounds/food/Atay.mp3',
+    image: '/assets/word-images/food/Atay.jpeg'
   },
   {
     translations: {
@@ -78,7 +86,8 @@ export default [
       darija: '9ahwa',
       english: 'Coffee'
     },
-    sound: '/assets/word-sounds/food/9ahwa.mp3'
+    sound: '/assets/word-sounds/food/9ahwa.mp3',
+    image: '/assets/word-images/food/9ahwa.jpeg'
   },
   {
     translations: {
@@ -95,7 +104,8 @@ export default [
       darija: '3assir',
       english: 'Juice'
     },
-    sound: '/assets/word-sounds/food/3assir.mp3'
+    sound: '/assets/word-sounds/food/3assir.mp3',
+    image: '/assets/word-images/food/3assir.jpeg'
   },
   {
     translations: {
@@ -112,7 +122,8 @@ export default [
       darija: 'Sukkar',
       english: 'Sugar'
     },
-    sound: '/assets/word-sounds/food/Sukkar.mp3'
+    sound: '/assets/word-sounds/food/Sukkar.mp3',
+    image: '/assets/word-images/food/Sukkar.jpeg'
   },
   {
     translations: {
@@ -120,7 +131,8 @@ export default [
       darija: 'Mel7a',
       english: 'Salt'
     },
-    sound: '/assets/word-sounds/food/Mel7a.mp3'
+    sound: '/assets/word-sounds/food/Mel7a.mp3',
+    image: '/assets/word-images/food/Mel7a.jpeg'
   },
   {
     translations: {
@@ -128,7 +140,8 @@ export default [
       darija: 'Ibzar',
       english: 'Pepper'
     },
-    sound: '/assets/word-sounds/food/Ibzar.mp3'
+    sound: '/assets/word-sounds/food/Ibzar.mp3',
+    image: '/assets/word-images/food/Ibzar.jpeg'
   },
   {
     translations: {
@@ -136,7 +149,8 @@ export default [
       darija: 'Zit',
       english: 'Oil'
     },
-    sound: '/assets/word-sounds/food/Zit.mp3'
+    sound: '/assets/word-sounds/food/Zit.mp3',
+    image: '/assets/word-images/food/Zit.jpeg'
   },
   {
     translations: {
