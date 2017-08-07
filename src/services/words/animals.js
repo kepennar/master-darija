@@ -5,7 +5,8 @@ export default [
       darija: 'Mech',
       english: 'Cat'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/animals/Mech.jpeg'
   },
   {
     translations: {
@@ -13,7 +14,8 @@ export default [
       darija: 'Kelb',
       english: 'Dog'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/animals/Kelb.jpeg'
   },
   {
     translations: {
@@ -21,7 +23,8 @@ export default [
       darija: 'Far',
       english: 'Mouse'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/animals/Far.jpeg'
   },
   {
     translations: {
@@ -29,7 +32,8 @@ export default [
       darija: '3awed',
       english: 'Horse'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/animals/3awed.jpeg'
   },
   {
     translations: {
@@ -37,7 +41,8 @@ export default [
       darija: 'Begra',
       english: 'Cow'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/animals/Begra.jpeg'
   },
   {
     translations: {
@@ -45,6 +50,7 @@ export default [
       darija: 'kbech',
       english: 'Sheep'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/animals/Kbech.jpeg'
   }
 ];
