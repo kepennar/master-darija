@@ -5,7 +5,8 @@ export default [
       darija: 'Oum',
       english: 'Mother'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/family/Oum.jpeg'
   },
   {
     translations: {
@@ -13,7 +14,8 @@ export default [
       darija: 'Ab',
       english: 'Father'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/family/Ab.jpeg'
   },
   {
     translations: {
@@ -21,7 +23,8 @@ export default [
       darija: 'Jeda',
       english: 'Grandma'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/family/Jeda.jpeg'
   },
   {
     translations: {
@@ -29,6 +32,7 @@ export default [
       darija: 'Jed',
       english: 'Grandpa'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/family/Jed.jpeg'
   }
 ];
