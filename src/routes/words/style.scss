@@ -4,7 +4,11 @@
   align-items: stretch;
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
 .layout {
   padding: 0 !important;
+}
+.gridInner {
+  height: 100%;
 }
