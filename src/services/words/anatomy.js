@@ -5,7 +5,8 @@ export default [
       darija: 'Rass',
       english: 'Head'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Rass.jpeg'
   },
   {
     translations: {
@@ -13,15 +14,17 @@ export default [
       darija: 'Yed',
       english: 'Hand'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Yed.jpeg'
   },
   {
     translations: {
       arabic: 'رجل',
       darija: 'Rjel',
-      english: 'Foot'
+      english: 'Foot/Leg'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Rjel.jpeg'
   },
   {
     translations: {
@@ -29,7 +32,8 @@ export default [
       darija: 'Wjeh',
       english: 'Face'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Wjeh.jpeg'
   },
   {
     translations: {
@@ -37,7 +41,8 @@ export default [
       darija: 'Fom',
       english: 'Mouth'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Fom.jpeg'
   },
   {
     translations: {
@@ -45,7 +50,8 @@ export default [
       darija: '3in',
       english: 'Eye'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/3in.jpeg'
   },
   {
     translations: {
@@ -53,7 +59,8 @@ export default [
       darija: 'Nif',
       english: 'Nose'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Nif.jpeg'
   },
   {
     translations: {
@@ -61,6 +68,7 @@ export default [
       darija: 'Wden',
       english: 'Ear'
     },
-    sound: '/assets/test.mp3'
+    sound: '/assets/test.mp3',
+    image: '/assets/word-images/anatomy/Wden.jpeg'
   }
 ];
