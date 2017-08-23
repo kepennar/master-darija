@@ -5,7 +5,17 @@ export default [
         darija: 'Serwal',
         english: 'Trousers'
       },
-      sound: '/assets/test.mp3'
+      sound: '/assets/test.mp3',
+      image: '/assets/word-images/clothes/Serwal.jpeg'
+    },
+    {
+      translations: {
+        arabic: 'قميص',
+        darija: '9amija',
+        english: 'Shirt'
+      },
+      sound: '/assets/test.mp3',
+      image: '/assets/word-images/clothes/9amija.jpeg'
     },
     {
       translations: {
@@ -13,7 +23,17 @@ export default [
         darija: 'Saya',
         english: 'Skirt'
       },
-      sound: '/assets/test.mp3'
+      sound: '/assets/test.mp3',
+      image: '/assets/word-images/clothes/Saya.jpeg'
+    },
+    {
+      translations: {
+        arabic: 'فستان',
+        darija: 'Keswa',
+        english: 'Dress'
+      },
+      sound: '/assets/test.mp3',
+      image: '/assets/word-images/clothes/Keswa.jpeg'
     },
     {
       translations: {
@@ -21,14 +41,16 @@ export default [
         darija: 'Sebat',
         english: 'Shoes'
       },
-      sound: '/assets/test.mp3'
+      sound: '/assets/test.mp3',
+      image: '/assets/word-images/clothes/Sebat.jpeg'
     },
     {
       translations: {
-        arabic: 'خف',
-        darija: 'Sendala',
+        arabic: 'صنادل',
+        darija: 'Sandala',
         english: 'Sandals'
       },
-      sound: '/assets/test.mp3'
+      sound: '/assets/test.mp3',
+      image: '/assets/word-images/clothes/Sandala.jpeg'
     }
   ]
