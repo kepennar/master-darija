@@ -37,6 +37,15 @@ export default [
   },
   {
     translations: {
+      arabic: 'مشمش',
+      darija: 'Mechmach',
+      english: 'apricot'
+    },
+    sound: '/assets/word-sounds/food/Mechmach.mp3',
+    image: '/assets/word-images/food/Mechmach.jpeg'
+  },
+  {
+    translations: {
       arabic: 'بطيخ',
       darija: 'Dela7',
       english: 'Watermelon'
@@ -52,6 +61,51 @@ export default [
     },
     sound: '/assets/word-sounds/food/Fraise.mp3',
     image: '/assets/word-images/food/Fraise.jpeg'
+  },
+  {
+    translations: {
+      arabic: 'بصل',
+      darija: 'Besla',
+      english: 'Onion'
+    },
+    sound: '/assets/word-sounds/food/Besla.mp3',
+    image: '/assets/word-images/food/Besla.jpeg'
+  },
+  {
+    translations: {
+      arabic: 'ثوم',
+      darija: 'Touma',
+      english: 'Garlic'
+    },
+    sound: '/assets/word-sounds/food/Touma.mp3',
+    image: '/assets/word-images/food/Touma.jpeg'
+  },
+  {
+    translations: {
+      arabic: 'طماطم',
+      darija: 'Maticha',
+      english: 'Tomato'
+    },
+    sound: '/assets/word-sounds/food/Maticha.mp3',
+    image: '/assets/word-images/food/Maticha.jpeg'
+  },
+  {
+    translations: {
+      arabic: 'بطاطا',
+      darija: 'Btata',
+      english: 'Potatoes'
+    },
+    sound: '/assets/word-sounds/food/Btata.mp3',
+    image: '/assets/word-images/food/Btata.jpeg'
+  },
+  {
+    translations: {
+      arabic: 'بيضة',
+      darija: 'Bayd',
+      english: 'Egg'
+    },
+    sound: '/assets/word-sounds/food/Bayd.mp3',
+    image: '/assets/word-images/food/Bayd.jpeg'
   },
   {
     translations: {
