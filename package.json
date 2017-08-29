@@ -16,8 +16,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.4.0",
-    "eslint-config-synacor": "^1.0.2",
+    "eslint": "^4.5.0",
+    "eslint-config-synacor": "^1.1.0",
     "firebase-tools": "^3.9.2",
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
-    "preact": "^8.2.1",
-    "preact-material-components": "^1.1.1",
-    "preact-router": "^2.5.5"
+    "preact": "^8.2.5",
+    "preact-material-components": "^1.1.5",
+    "preact-router": "^2.5.7"
   }
 }
