@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
- <loc>https://mister-darija.xyz</loc>
- <lastmod>2017-08-06</lastmod>
+ <loc>https://master-darija.xyz</loc>
+ <lastmod>2017-09-09</lastmod>
  <changefreq>weekly</changefreq>
  <priority>0.9</priority>
 </url>
 <url>
- <loc>https://mister-darija.xyz/words/essentials</loc>
+ <loc>https://master-darija.xyz/home</loc>
+ <lastmod>2017-09-09</lastmod>
+ <changefreq>weekly</changefreq>
+ <priority>0.9</priority>
+</url>
+<url>
+ <loc>https://master-darija.xyz/words/essentials</loc>
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://mister-darija.xyz/words/food</loc>
+ <loc>https://master-darija.xyz/words/food</loc>
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://mister-darija.xyz/words/clothes</loc>
+ <loc>https://master-darija.xyz/words/clothes</loc>
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://mister-darija.xyz/words/animals</loc>
+ <loc>https://master-darija.xyz/words/animals</loc>
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://mister-darija.xyz/words/anatomy</loc>
+ <loc>https://master-darija.xyz/words/anatomy</loc>
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://mister-darija.xyz/words/family</loc>
+ <loc>https://master-darija.xyz/words/family</loc>
  <changefreq>weekly</changefreq>
 </url>
 <url>
- <loc>https://mister-darija.xyz/credits</loc>
+ <loc>https://master-darija.xyz/credits</loc>
  <changefreq>weekly</changefreq>
  <priority>0.5</priority>
 </url>

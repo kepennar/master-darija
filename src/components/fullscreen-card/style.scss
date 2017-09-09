@@ -1,0 +1,41 @@
+@import '../../style/colors';
+
+.fullscreenCard {
+  background-color: $secondary-background-color;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.cardContent {
+  align-self: center;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 1024px;
+}
+
+.closeBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1em 1em 0 0;
+  .closeIcon {
+    cursor: pointer;
+    text-shadow: 0 1px 0 #c0c0c0;
+    font-size: 1.5em;
+
+    &:after {
+      content: '✖';
+    }
+    &:hover {
+      color: #333;
+    }
+  }
+}

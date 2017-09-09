@@ -16,9 +16,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-synacor": "^1.1.0",
-    "firebase-tools": "^3.9.2",
+    "eslint": "^4.6.1",
+    "eslint-config-synacor": "^1.1.1",
+    "firebase-tools": "^3.10.1",
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
     "preact-cli": "^1.4.1",
@@ -27,7 +27,7 @@
   "dependencies": {
     "hammerjs": "^2.0.8",
     "preact": "^8.2.5",
-    "preact-material-components": "^1.1.5",
+    "preact-material-components": "^1.1.6",
     "preact-router": "^2.5.7"
   }
 }

@@ -1,0 +1,34 @@
+@import '../../style/colors';
+$separator-color: transparentize($sienna, 0.5);
+
+.tutorial {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .picto {
+    font-size: 8em;
+    margin-top: -60px;
+    text-shadow: 6px 8px 8px $txt-color;
+  }
+  .tutoImage {
+    max-height: 200px;
+  }
+  hr {
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: -1px -5px 6px $separator-color;
+  }
+  .bottomButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    .nextButton {
+      width: 150px;
+    }
+  }
+}

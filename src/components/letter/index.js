@@ -1,19 +1,20 @@
 import Player from '../player';
-import Translations from './translations';
 
 import style from './style';
 
 export default ({
-  translations,
+  translations: { web, arabic },
   soundSrc,
   onPlay,
   play,
   onEnded,
   stopIt,
-  imgSrc,
   className
 }) => (
-  <div class={`${className} ${style.container}`}>
+  <div class={style.letterContainer}>
+    <div class={style.translations}>
+      {web} : {arabic}
+    </div>
     <Player
       soundSrc={soundSrc}
       onPlay={onPlay}
@@ -21,11 +22,6 @@ export default ({
       stopIt={stopIt}
       onEnded={onEnded}
       className={style.player}
-    />
-    <Translations
-      imgSrc={imgSrc}
-      translations={translations}
-      className={style.translations}
     />
   </div>
 );

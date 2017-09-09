@@ -1,0 +1,13 @@
+.letterContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 150px;
+
+  .translations {
+    font-size: 1.5em;
+  }
+
+  .player {
+    margin-left: auto;
+  }
+}

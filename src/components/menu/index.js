@@ -32,19 +32,25 @@ export default class Menu extends Component {
             svg="/assets/icons/peoples.svg"
             onClick={() => onOpenMenu(false)}
           />
+          <MenuItem
+            route="/tutorial/0"
+            label="Tutorial"
+            svg="/assets/icons/question.svg"
+            onClick={() => onOpenMenu(false)}
+          />
           <Drawer.TemporaryDrawerHeader
             className={`mdc-temporary-drawer__header ${style.header}`}
           >
             Categories
           </Drawer.TemporaryDrawerHeader>
-          {Categories.map(({ label, svg, name }) =>
+          {Categories.map(({ label, svg, name }) => (
             <MenuItem
               route={`/words/${name}`}
               label={label}
               svg={svg}
               onClick={() => onOpenMenu(false)}
             />
-          )}
+          ))}
         </Drawer.TemporaryDrawer>
       </div>
     );
