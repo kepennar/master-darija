@@ -22,8 +22,7 @@ import 'preact-material-components/IconToggle/style';
 import 'preact-material-components/Button/style';
 import 'preact-material-components/Elevation/style.css';
 
-// import Home from 'async!./home';
-// import Profile from 'async!./profile';
+const getHammer = () => (typeof window !== 'undefined' ? window.Hammer : null);
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -34,6 +33,33 @@ export default class App extends Component {
     super(props);
     this.state.openMenu = false;
   }
+
+  appRef = app => {
+    if (this._hammer) {
+      this._unregisterHammer();
+    }
+    const hammer = getHammer();
+    if (hammer && app) {
+      this._hammer = hammer(app);
+      this._hammer
+        .get('swipe')
+        .set({ direction: Hammer.DIRECTION_RIGHT, domEvents: true });
+      this._hammer.on('swipe', evt => {
+        if (evt.direction === 4) {
+          this.onOpenMenu(true);
+        }
+      });
+    }
+  };
+
+  _unregisterHammer() {
+    if (this._hammer) {
+      this._hammer.stop();
+      this._hammer.destroy();
+    }
+    this._hammer = null;
+  }
+
   onOpenMenu(openMenu) {
     this.setState({ openMenu });
   }
@@ -47,7 +73,7 @@ export default class App extends Component {
 
   render(props, { openMenu }) {
     return (
-      <div id="app">
+      <div id="app" ref={this.appRef}>
         <Header onOpenMenu={val => this.onOpenMenu(val)} />
         <Menu open={openMenu} onOpenMenu={val => this.onOpenMenu(val)} />
         <Router onChange={this.onRouteChange}>

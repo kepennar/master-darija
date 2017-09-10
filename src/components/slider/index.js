@@ -19,12 +19,18 @@ export default class Slider extends Component {
     }
     if (slider) {
       this._hammer = _hammer(slider);
+      this._hammer
+        .get('swipe')
+        .set({ direction: Hammer.DIRECTION_HORIZONTAL, domEvents: true });
       this._hammer.on('swipe', evt => {
         if (evt.direction === 2) {
           this.nextSlide();
         } else if (evt.direction === 4) {
           this.previousSlide();
         }
+      });
+      this._hammer.on('hammer.input', evt => {
+        evt.srcEvent.stopPropagation();
       });
     }
   };
@@ -88,11 +94,11 @@ export default class Slider extends Component {
       <div class={style.slider} ref={this.sliderRef}>
         <div class={style.sliderContainer} style={{ transform }}>
           {spacer}
-          {children.map(c =>
+          {children.map(c => (
             <Slide index={currentSlideIndex} width={width} margin={margin}>
               {c}
             </Slide>
-          )}
+          ))}
         </div>
       </div>
     );
