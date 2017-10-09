@@ -165,7 +165,7 @@ export default [
     translations: {
       arabic: 'عصير البرتقال',
       darija: '3assir limoun',
-      english: 'Otange juice'
+      english: 'Orange juice'
     },
     sound: '/assets/word-sounds/food/3assir_limoun.mp3',
     image: '/assets/word-images/food/3assir_limoun.jpeg'
