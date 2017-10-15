@@ -5,7 +5,7 @@ export default [
         darija: 'Serwal',
         english: 'Trousers'
       },
-      sound: '/assets/test.mp3',
+      sound: '/assets/word-sounds/clothes/Serwal.mp3',
       image: '/assets/word-images/clothes/Serwal.jpeg'
     },
     {
@@ -14,7 +14,7 @@ export default [
         darija: '9amija',
         english: 'Shirt'
       },
-      sound: '/assets/test.mp3',
+      sound: '/assets/word-sounds/clothes/9amija.mp3',
       image: '/assets/word-images/clothes/9amija.jpeg'
     },
     {
@@ -23,7 +23,7 @@ export default [
         darija: 'Saya',
         english: 'Skirt'
       },
-      sound: '/assets/test.mp3',
+      sound: '/assets/word-sounds/clothes/Saya.mp3',
       image: '/assets/word-images/clothes/Saya.jpeg'
     },
     {
@@ -32,7 +32,7 @@ export default [
         darija: 'Keswa',
         english: 'Dress'
       },
-      sound: '/assets/test.mp3',
+      sound: '/assets/word-sounds/clothes/Keswa.mp3',
       image: '/assets/word-images/clothes/Keswa.jpeg'
     },
     {
@@ -41,7 +41,7 @@ export default [
         darija: 'Sebat',
         english: 'Shoes'
       },
-      sound: '/assets/test.mp3',
+      sound: '/assets/word-sounds/clothes/Sebat.mp3',
       image: '/assets/word-images/clothes/Sebat.jpeg'
     },
     {
@@ -50,7 +50,7 @@ export default [
         darija: 'Sandala',
         english: 'Sandals'
       },
-      sound: '/assets/test.mp3',
+      sound: '/assets/word-sounds/clothes/Sandala.mp3',
       image: '/assets/word-images/clothes/Sandala.jpeg'
     }
   ]

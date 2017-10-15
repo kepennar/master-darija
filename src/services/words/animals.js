@@ -5,7 +5,7 @@ export default [
       darija: 'Mech',
       english: 'Cat'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/animals/Mech.mp3',
     image: '/assets/word-images/animals/Mech.jpeg'
   },
   {
@@ -14,7 +14,7 @@ export default [
       darija: 'Kelb',
       english: 'Dog'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/animals/Kelb.mp3',
     image: '/assets/word-images/animals/Kelb.jpeg'
   },
   {
@@ -23,7 +23,7 @@ export default [
       darija: 'Far',
       english: 'Mouse'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/animals/Far.mp3',
     image: '/assets/word-images/animals/Far.jpeg'
   },
   {
@@ -32,7 +32,7 @@ export default [
       darija: '3awed',
       english: 'Horse'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/animals/3awed.mp3',
     image: '/assets/word-images/animals/3awed.jpeg'
   },
   {
@@ -41,7 +41,7 @@ export default [
       darija: 'Begra',
       english: 'Cow'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/animals/Begra.mp3',
     image: '/assets/word-images/animals/Begra.jpeg'
   },
   {
@@ -50,7 +50,7 @@ export default [
       darija: 'kbech',
       english: 'Sheep'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/animals/Kbech.mp3',
     image: '/assets/word-images/animals/Kbech.jpeg'
   }
 ];

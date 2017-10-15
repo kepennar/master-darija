@@ -5,7 +5,7 @@ export default [
       darija: 'Rass',
       english: 'Head'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Rass.mp3',
     image: '/assets/word-images/anatomy/Rass.jpeg'
   },
   {
@@ -14,7 +14,7 @@ export default [
       darija: 'Yed',
       english: 'Hand'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Yed.mp3',
     image: '/assets/word-images/anatomy/Yed.jpeg'
   },
   {
@@ -23,7 +23,7 @@ export default [
       darija: 'Rjel',
       english: 'Foot/Leg'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Rjel.mp3',
     image: '/assets/word-images/anatomy/Rjel.jpeg'
   },
   {
@@ -32,7 +32,7 @@ export default [
       darija: 'Wjeh',
       english: 'Face'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Wjeh.mp3',
     image: '/assets/word-images/anatomy/Wjeh.jpeg'
   },
   {
@@ -41,7 +41,7 @@ export default [
       darija: 'Fom',
       english: 'Mouth'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Fom.mp3',
     image: '/assets/word-images/anatomy/Fom.jpeg'
   },
   {
@@ -50,7 +50,7 @@ export default [
       darija: '3in',
       english: 'Eye'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/3in.mp3',
     image: '/assets/word-images/anatomy/3in.jpeg'
   },
   {
@@ -59,7 +59,7 @@ export default [
       darija: 'Nif',
       english: 'Nose'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Nif.mp3',
     image: '/assets/word-images/anatomy/Nif.jpeg'
   },
   {
@@ -68,7 +68,7 @@ export default [
       darija: 'Wden',
       english: 'Ear'
     },
-    sound: '/assets/test.mp3',
+    sound: '/assets/word-sounds/anatomy/Wden.mp3',
     image: '/assets/word-images/anatomy/Wden.jpeg'
   }
 ];
