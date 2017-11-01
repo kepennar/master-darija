@@ -20,7 +20,7 @@ import 'preact-material-components/Drawer/style';
 import 'preact-material-components/List/style';
 import 'preact-material-components/IconToggle/style';
 import 'preact-material-components/Button/style';
-import 'preact-material-components/Elevation/style.css';
+import 'preact-material-components/Elevation/style';
 
 const getHammer = () => (typeof window !== 'undefined' ? window.Hammer : null);
 

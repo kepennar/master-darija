@@ -1,10 +1,5 @@
 export const Categories = [
   {
-    name: 'essentials',
-    label: 'Essentials',
-    svg: '/assets/icons/001-essentials.svg'
-  },
-  {
     name: 'food',
     label: 'Food',
     svg: '/assets/icons/002-food.svg'

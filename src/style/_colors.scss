@@ -1,8 +1,14 @@
+$morocco-green: #006233;
+$morocco-red: #c1272d;
+$sienna: #793d2e;
+
 $background-color: #00897b;
 $secondary-background-color: #fafafa;
 $txt-color: #444;
 $secondary-txt-color: #fafafa;
 
-$morocco-green: #006233;
-$morocco-red: #c1272d;
-$sienna: #793D2E;
+$mdc-theme-primary: $sienna;
+$mdc-theme-secondary: $morocco-red;
+$mdc-theme-background: $secondary-background-color;
+
+@import '~@material/theme/mdc-theme';

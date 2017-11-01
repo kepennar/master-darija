@@ -31,6 +31,8 @@ $separator-color: transparentize($sienna, 0.5);
     width: 100%;
     .nextButton {
       width: 150px;
+      border-color: $sienna;
+      color: $sienna;
     }
   }
 }

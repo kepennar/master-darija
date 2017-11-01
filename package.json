@@ -16,18 +16,19 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-config-synacor": "^1.1.2",
-    "firebase-tools": "^3.13.1",
+    "eslint": "^4.10.0",
+    "eslint-config-synacor": "^2.0.2",
+    "firebase-tools": "^3.14.0",
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
-    "preact-cli": "^2.0.0",
+    "preact-cli": "^2.0.2",
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
+    "@material/theme": "^0.24.0",
     "hammerjs": "^2.0.8",
-    "preact": "^8.2.5",
-    "preact-material-components": "^1.2.1",
+    "preact": "^8.2.6",
+    "preact-material-components": "^1.2.4",
     "preact-router": "^2.5.7"
   }
 }
