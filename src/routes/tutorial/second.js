@@ -44,6 +44,13 @@ export default class TutorialSecond extends Component {
   _changeLetterPlaying(playingId) {
     this.setState({ playingId, stopIt: true });
   }
+  vizRef(svg) {
+    if (typeof window !== 'undefined') {
+      import('./letters-bubble-graph').then(lettersBubleGraph => {
+        lettersBubleGraph.default(svg);
+      });
+    }
+  }
 
   render({}, { stopIt, playingId }) {
     return (
@@ -53,16 +60,7 @@ export default class TutorialSecond extends Component {
           <div class={style.picto}>ﺡ</div>
           <p>
             In this app we will use the web arabic alphabet.
-            {LETTERS.map(({ sound, translations }) => (
-              <Letter
-                translations={translations}
-                soundSrc={sound}
-                onPlay={this.onPlay}
-                play={playingId === sound}
-                stopIt={stopIt && playingId !== sound}
-                onEnded={this.onEnded}
-              />
-            ))}
+            <svg ref={this.vizRef} />
           </p>
 
           <div class={style.bottomButton}>

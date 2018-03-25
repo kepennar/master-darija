@@ -36,3 +36,15 @@ $separator-color: transparentize($sienna, 0.5);
     }
   }
 }
+
+// D3 graph
+
+.nodes circle {
+  stroke: rgb(177, 177, 177);
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+.nodes text {
+  cursor: pointer;
+  font-family: Source Sans Pro, sans-serif;
+}

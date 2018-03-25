@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint src && preact test",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact --template src/index.template build",
+    "build": "preact --template src/index.template  build",
     "serve": "preact build && preact serve --port 8888",
     "dev": "preact --template src/index.template watch",
     "copy-seo": "cp -R seo/* build",
@@ -21,11 +21,16 @@
     "firebase-tools": "^3.14.0",
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
-    "preact-cli": "^2.0.2",
+    "preact-cli": "^2.2.1",
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
     "@material/theme": "^0.24.0",
+    "d3": "^5.0.0",
+    "d3-drag": "^1.2.1",
+    "d3-force": "^1.1.0",
+    "d3-selection": "^1.3.0",
+    "d3-transition": "^1.1.1",
     "hammerjs": "^2.0.8",
     "preact": "^8.2.6",
     "preact-material-components": "^1.2.4",
