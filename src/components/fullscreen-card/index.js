@@ -9,6 +9,6 @@ export default ({ children, onClose }) => (
     <div class={style.closeBtn}>
       <i class={style.closeIcon} onClick={onClose} />
     </div>
-    <Card.Primary className={style.cardContent}>{children}</Card.Primary>
+    <div className={style.cardContent}>{children}</div>
   </Card>
 );

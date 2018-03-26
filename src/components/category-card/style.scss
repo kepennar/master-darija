@@ -1,11 +1,21 @@
 @import '../../style/colors';
 
 .categoryCard {
-  background-color: $secondary-background-color;
+  .cardHeader {
+    padding: 8px 16px;
+    text-transform: capitalize;
+  }
+  .cardMedia {
+    margin: auto;
+    .picto {
+      width: 12em;
+    }
+  }
   .actions {
     flex-direction: row-reverse;
   }
   .button {
     background-color: $sienna;
+    color: var(--secondary-txt-color);
   }
 }

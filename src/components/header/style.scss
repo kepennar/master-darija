@@ -1,6 +1,9 @@
 @import '../../style/_colors';
 
 .toolbar {
+  .flagSection {
+    padding: 0;
+  }
   .flagTitle {
     min-height: 70px;
     width: 105px;

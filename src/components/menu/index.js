@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import Drawer from 'preact-material-components/Drawer';
+import List from 'preact-material-components/List';
 import MenuItem from './menu-item';
 
 import { Categories } from '../../services';
@@ -20,37 +21,41 @@ export default class Menu extends Component {
           className="mdc-typography mdc-temporary-drawer"
           ref={this.drawerRef}
         >
-          <MenuItem
-            route="/"
-            label="Home"
-            svg="/assets/icons/home.svg"
-            onClick={() => onOpenMenu(false)}
-          />
-          <MenuItem
-            route="/credits"
-            label="Credits"
-            svg="/assets/icons/peoples.svg"
-            onClick={() => onOpenMenu(false)}
-          />
-          <MenuItem
-            route="/tutorial/0"
-            label="Tutorial"
-            svg="/assets/icons/question.svg"
-            onClick={() => onOpenMenu(false)}
-          />
-          <Drawer.TemporaryDrawerHeader
-            className={`mdc-temporary-drawer__header ${style.header}`}
-          >
-            Categories
-          </Drawer.TemporaryDrawerHeader>
-          {Categories.map(({ label, svg, name }) => (
+          <Drawer.DrawerContent>
             <MenuItem
-              route={`/words/${name}`}
-              label={label}
-              svg={svg}
+              route="/"
+              label="Home"
+              svg="/assets/icons/home.svg"
               onClick={() => onOpenMenu(false)}
             />
-          ))}
+            <MenuItem
+              route="/credits"
+              label="Credits"
+              svg="/assets/icons/peoples.svg"
+              onClick={() => onOpenMenu(false)}
+            />
+            <MenuItem
+              route="/tutorial/0"
+              label="Tutorial"
+              svg="/assets/icons/question.svg"
+              onClick={() => onOpenMenu(false)}
+            />
+          </Drawer.DrawerContent>
+          <Drawer.DrawerContent>
+            <Drawer.TemporaryDrawerHeader
+              className={`mdc-temporary-drawer__header ${style.header}`}
+            >
+              Categories
+            </Drawer.TemporaryDrawerHeader>
+            {Categories.map(({ label, svg, name }) => (
+              <MenuItem
+                route={`/words/${name}`}
+                label={label}
+                svg={svg}
+                onClick={() => onOpenMenu(false)}
+              />
+            ))}
+          </Drawer.DrawerContent>
         </Drawer.TemporaryDrawer>
       </div>
     );

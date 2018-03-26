@@ -13,7 +13,6 @@ body {
   color: $txt-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --mdc-theme-primary: $sienna;
 }
 
 * {
@@ -25,3 +24,12 @@ body {
   flex-direction: column;
   height: 100%;
 }
+
+@import '~preact-material-components/Button/style';
+@import '~preact-material-components/Card/style';
+@import '~preact-material-components/Drawer/style';
+@import '~preact-material-components/Elevation/style';
+@import '~preact-material-components/IconToggle/style';
+@import '~preact-material-components/LayoutGrid/style';
+@import '~preact-material-components/List/style';
+@import '~preact-material-components/Toolbar/style';

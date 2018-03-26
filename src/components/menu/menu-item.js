@@ -6,7 +6,7 @@ import { route as goTo } from 'preact-router';
 
 import style from './style';
 
-export default ({ route, label, icon, svg, onClick }) =>
+export default ({ route, label, icon, svg, onClick }) => (
   <Drawer.DrawerItem
     className={`mdc-list-item ${style.menuItem}`}
     onClick={() => {
@@ -14,13 +14,12 @@ export default ({ route, label, icon, svg, onClick }) =>
       onClick();
     }}
   >
-    {icon &&
-      <List.ItemIcon>
-        {icon}
-      </List.ItemIcon>}
-    {svg &&
-      <List.ItemIcon>
+    {icon && <List.ItemGraphic>{icon}</List.ItemGraphic>}
+    {svg && (
+      <List.ItemGraphic>
         <img src={svg} />
-      </List.ItemIcon>}
+      </List.ItemGraphic>
+    )}
     {label}
-  </Drawer.DrawerItem>;
+  </Drawer.DrawerItem>
+);

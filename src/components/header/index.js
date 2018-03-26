@@ -2,12 +2,12 @@ import { h } from 'preact';
 import Toolbar from 'preact-material-components/Toolbar';
 import style from './style';
 
-export default ({ onOpenMenu }) =>
+export default ({ onOpenMenu }) => (
   <div class={style.toolbar}>
     <Toolbar>
       <Toolbar.Row>
-        <Toolbar.Section align-start>
-          <Toolbar.Title
+        <Toolbar.Section className={style.flagSection} align-start>
+          <Toolbar.Icon
             className={style.flagTitle}
             onClick={evt => {
               evt.preventDefault();
@@ -20,4 +20,5 @@ export default ({ onOpenMenu }) =>
         </Toolbar.Section>
       </Toolbar.Row>
     </Toolbar>
-  </div>;
+  </div>
+);

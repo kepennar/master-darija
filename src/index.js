@@ -1,4 +1,5 @@
 import './style';
+
 if (typeof window !== 'undefined') {
   require('hammerjs');
 }

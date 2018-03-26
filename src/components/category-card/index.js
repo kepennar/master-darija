@@ -9,17 +9,21 @@ import style from './style';
 export default ({ name, pictoUrl, url }) => (
   <LayoutGrid.Cell cols="4">
     <Card className={style.categoryCard}>
-      <Card.Primary>
-        <Card.Title large>{name}</Card.Title>
-        <Card.Subtitle>All about {name}</Card.Subtitle>
-      </Card.Primary>
-      <Card.MediaItem src={pictoUrl} x="1dot5" />
+      <div class={style.cardHeader}>
+        <h2 class="mdc-typography--title">{name}</h2>
+        <div class="mdc-typography--caption">All about {name}</div>
+      </div>
+      <Card.Media className={style.cardMedia}>
+        <img className={style.picto} src={pictoUrl} />
+      </Card.Media>
       <Card.Actions className={style.actions}>
-        <Card.Action>
-          <Button raised className={style.button} onClick={() => route(url)}>
-            Go
-          </Button>
-        </Card.Action>
+        <Card.ActionButton
+          raised
+          className={style.button}
+          onClick={() => route(url)}
+        >
+          Go
+        </Card.ActionButton>
       </Card.Actions>
     </Card>
   </LayoutGrid.Cell>

@@ -13,22 +13,13 @@ import Credits from '../routes/credits';
 
 import FirstVisitRedirect from './firstVisitRedirect';
 
-import 'preact-material-components/LayoutGrid/style';
-import 'preact-material-components/Card/style';
-import 'preact-material-components/Toolbar/style';
-import 'preact-material-components/Drawer/style';
-import 'preact-material-components/List/style';
-import 'preact-material-components/IconToggle/style';
-import 'preact-material-components/Button/style';
-import 'preact-material-components/Elevation/style';
-
 const getHammer = () => (typeof window !== 'undefined' ? window.Hammer : null);
 
 export default class App extends Component {
   /** Gets fired when the route changes.
-	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-	 *	@param {string} event.url	The newly routed URL
-	 */
+   *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
+   *	@param {string} event.url	The newly routed URL
+   */
   constructor(props) {
     super(props);
     this.state.openMenu = false;
