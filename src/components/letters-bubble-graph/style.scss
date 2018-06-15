@@ -1,0 +1,19 @@
+// D3 graph
+.graph {
+  :global {
+    .nodes circle {
+      stroke: rgb(177, 177, 177);
+      stroke-width: 1.5px;
+      cursor: pointer;
+    }
+    .nodes text {
+      cursor: pointer;
+      font-weight: lighter;
+      font-family: 'ralewayregular', arial, sans-serif;
+    }
+
+    .peripherical {
+      fill: rgba(66, 64, 82, 0.397);
+    }
+  }
+}

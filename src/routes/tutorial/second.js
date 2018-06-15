@@ -2,9 +2,8 @@ import { h, Component } from 'preact';
 import Button from 'preact-material-components/Button';
 import { route as goTo } from 'preact-router';
 
-import { LETTERS } from '../../services';
 import FullscreenCard from '../../components/fullscreen-card';
-import Letter from '../../components/letter';
+import LetterBubbleGraph from '../../components/letters-bubble-graph';
 
 import style from './style';
 
@@ -44,13 +43,6 @@ export default class TutorialSecond extends Component {
   _changeLetterPlaying(playingId) {
     this.setState({ playingId, stopIt: true });
   }
-  vizRef(svg) {
-    if (typeof window !== 'undefined') {
-      import('./letters-bubble-graph').then(lettersBubleGraph => {
-        lettersBubleGraph.default(svg);
-      });
-    }
-  }
 
   render({}, { stopIt, playingId }) {
     return (
@@ -60,7 +52,7 @@ export default class TutorialSecond extends Component {
           <div class={style.picto}>ﺡ</div>
           <p>
             In this app we will use the web arabic alphabet.
-            <svg ref={this.vizRef} />
+            <LetterBubbleGraph />
           </p>
 
           <div class={style.bottomButton}>

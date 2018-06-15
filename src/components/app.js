@@ -56,7 +56,7 @@ export default class App extends Component {
   }
 
   onRouteChange = ({ url }) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.ga) {
       window.ga('set', 'page', url);
       window.ga('send', 'pageview');
     }

@@ -62,7 +62,7 @@ const centerY = height / 2;
 const periphicalCircleRadius = 20;
 const centerCircleRadius = 55;
 
-export default svgElem => {
+export default (svgElem, onChange) => {
   const svg = select(svgElem)
     .attr('width', width)
     .attr('height', height);
@@ -85,6 +85,7 @@ export default svgElem => {
     const circle = node
       .append('circle')
       .attr('id', d => d.id)
+
       .attr(
         'r',
         d => (d.id === 'center' ? centerCircleRadius : periphicalCircleRadius)
@@ -92,14 +93,12 @@ export default svgElem => {
 
     node
       .append('clipPath')
-      .attr('class', 'circle')
       .attr('id', d => `clip-${d.id}`)
       .append('use')
       .attr('xlink:href', d => `#${d.id}`);
 
     node
       .append('text')
-      .attr('class', 'circle')
       .attr('clip-path', d => `url(#clip-${d.id})`)
       .append('tspan')
       .attr(
@@ -107,7 +106,7 @@ export default svgElem => {
         d =>
           d.id === 'center'
             ? -centerCircleRadius / 2
-            : -periphicalCircleRadius / 2
+            : -periphicalCircleRadius / 4
       )
       .attr('y', 5)
       .attr('fill', 'white')
@@ -117,15 +116,23 @@ export default svgElem => {
   }
 
   function reset(nextSelectedId) {
-    const t = transition().duration(200);
+    const t = transition().duration(400);
+
+    let transitionCounter = 0;
     svg.selectAll('.links').remove();
     rootNode
       .selectAll('circle')
       .transition(t)
       .attr('r', 1e-6)
+      .on('start', () => {
+        transitionCounter++;
+      })
       .on('end', () => {
         rootNode.selectAll('.circle').remove();
-        renderGraph(nextSelectedId);
+        transitionCounter--;
+        if (transitionCounter === 0) {
+          renderGraph(nextSelectedId);
+        }
       });
   }
 
@@ -138,6 +145,7 @@ export default svgElem => {
 
   const renderGraph = selectedNodeId => {
     const datas = getDatas(selectedNodeId);
+    onChange(datas);
 
     const link = svg
       .append('g')
@@ -154,7 +162,11 @@ export default svgElem => {
       .data(datas.nodes)
       .enter()
       .append('g')
-      .attr('class', 'circle')
+      .attr(
+        'class',
+        d => (d.id === 'center' ? `circle center` : `circle peripherical`)
+      )
+      .style('filter', 'url(#drop-shadow)')
       .call(
         drag()
           .on('start', dragstarted)
@@ -171,14 +183,14 @@ export default svgElem => {
     function dragged(d) {
       d.fx = event.x;
       d.fy = event.y;
+    }
 
+    function dragended(d) {
       const inCenter = collisionWithCenterDetection(d);
       if (inCenter) {
         reset(d.id);
       }
-    }
 
-    function dragended(d) {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null;
       d.fy = null;
