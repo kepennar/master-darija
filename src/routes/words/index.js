@@ -73,7 +73,7 @@ export default class Words extends Component {
             <LayoutGrid.Cell cols="12" align="middle">
               <div>
                 <Slider ref={this._sliderRef} onSlideChange={this.onWordChange}>
-                  {this.words.map(({ sound, translations, image }) =>
+                  {this.words.map(({ sound, translations, image }) => (
                     <Word
                       soundSrc={sound}
                       translations={translations}
@@ -84,7 +84,7 @@ export default class Words extends Component {
                       onEnded={this.onEnded}
                       className={style.listItem}
                     />
-                  )}
+                  ))}
                 </Slider>
               </div>
             </LayoutGrid.Cell>

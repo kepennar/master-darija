@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import Drawer from 'preact-material-components/Drawer';
-import List from 'preact-material-components/List';
 import MenuItem from './menu-item';
 
 import { Categories } from '../../services';

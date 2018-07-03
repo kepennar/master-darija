@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import Card from 'preact-material-components/Card';
-import Icon from 'preact-material-components/Icon';
 
 import style from './style';
 

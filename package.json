@@ -4,36 +4,40 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint src && preact test",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact --template src/index.template  build",
-    "serve": "preact build && preact serve --port 8888",
-    "dev": "preact --template src/index.template watch",
+    "build": "preact build --template src/template.html",
     "copy-seo": "cp -R seo/* build",
-    "deploy": "npm run build && npm run copy-seo && firebase deploy"
+    "deploy": "npm run build && npm run copy-seo && firebase deploy",
+    "dev": "preact watch --template src/template.html",
+    "lint": "eslint src",
+    "serve": "preact build && preact serve --port 8888",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "test": "eslint src && preact test",
+    "prettyall": "prettier --single-quote --write \"src/**/*.{js, scss}\""
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@material/theme": "^0.33.0",
-    "d3": "^5.4.0",
+    "@material/theme": "^0.35.0",
+    "d3": "^5.5.0",
     "d3-drag": "^1.2.1",
     "d3-force": "^1.1.0",
     "d3-selection": "^1.3.0",
     "d3-transition": "^1.1.1",
     "hammerjs": "^2.0.8",
     "preact": "^8.2.9",
-    "preact-material-components": "^1.4.5",
+    "preact-material-components": "^1.4.6",
     "preact-router": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "^4.10.0",
     "eslint-config-synacor": "^3.0.1",
-    "firebase-tools": "^3.18.6",
+    "firebase-tools": "^3.19.2",
+    "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.4",
     "node-sass": "^4.9.0",
-    "preact-cli": "^2.2.1",
-    "sass-loader": "^6.0.7"
+    "preact-cli": "^3.0.0-next.5",
+    "prettier": "^1.13.7",
+    "sass-loader": "^7.0.3"
   }
 }
