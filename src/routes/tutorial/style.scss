@@ -9,11 +9,7 @@ $separator-color: transparentize($sienna, 0.5);
   h1,
   h2 {
     text-align: center;
-  }
-  .picto {
-    font-size: 8em;
-    margin-top: -60px;
-    text-shadow: 6px 8px 8px $txt-color;
+    margin-top: 0;
   }
   .tutoImage {
     max-height: 200px;
@@ -29,6 +25,7 @@ $separator-color: transparentize($sienna, 0.5);
     flex-grow: 1;
     justify-content: space-between;
     width: 100%;
+
     .nextButton {
       width: 150px;
       border-color: $sienna;

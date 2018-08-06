@@ -71,7 +71,7 @@ export default class Words extends Component {
         <LayoutGrid className={style.layout}>
           <LayoutGrid.Inner className={style.gridInner}>
             <LayoutGrid.Cell cols="12" align="middle">
-              <div>
+              <div class={style.container}>
                 <Slider ref={this._sliderRef} onSlideChange={this.onWordChange}>
                   {this.words.map(({ sound, translations, image }) => (
                     <Word

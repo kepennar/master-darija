@@ -4,13 +4,18 @@ import style from './style';
 
 export default class LetterBubbleGraph extends Component {
   onChange = datas => {
-    console.log('[DEBUG]onChange : datas', datas);
+    const selected = datas.nodes.find(({ id }) => {
+      return id === 'center';
+    });
+    this.props.select(selected);
   };
+
   vizRef(svg) {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && !this.init) {
       const onChange = this.onChange;
       import('./letters-bubble-graph').then(lettersBubleGraph => {
         lettersBubleGraph.default(svg, onChange);
+        this.init = true;
       });
     }
   }

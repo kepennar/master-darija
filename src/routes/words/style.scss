@@ -1,5 +1,8 @@
 @import '../../style/colors';
 
+.container {
+  max-width: 1080px;
+}
 .words {
   align-items: stretch;
   display: flex;

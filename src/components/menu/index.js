@@ -28,12 +28,6 @@ export default class Menu extends Component {
               onClick={() => onOpenMenu(false)}
             />
             <MenuItem
-              route="/credits"
-              label="Credits"
-              svg="/assets/icons/peoples.svg"
-              onClick={() => onOpenMenu(false)}
-            />
-            <MenuItem
               route="/tutorial/0"
               label="Tutorial"
               svg="/assets/icons/question.svg"
@@ -54,6 +48,14 @@ export default class Menu extends Component {
                 onClick={() => onOpenMenu(false)}
               />
             ))}
+          </Drawer.DrawerContent>
+          <Drawer.DrawerContent>
+            <MenuItem
+              route="/credits"
+              label="Credits"
+              svg="/assets/icons/peoples.svg"
+              onClick={() => onOpenMenu(false)}
+            />
           </Drawer.DrawerContent>
         </Drawer.TemporaryDrawer>
       </div>

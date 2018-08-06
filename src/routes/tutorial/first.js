@@ -7,7 +7,7 @@ import style from './style';
 
 export default () => (
   <div class={style.tutorial}>
-    <FullscreenCard onClose={() => goTo('/home')}>
+    <FullscreenCard fadeIn onClose={() => goTo('/home')}>
       <h1>Welcome to Master Darija</h1>
       <h3>The best place to learn Darija</h3>
       <img class={style.tutoImage} src="/assets/tarboosh.svg" />

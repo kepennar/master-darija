@@ -4,6 +4,7 @@ import { route as goTo } from 'preact-router';
 
 import FullscreenCard from '../../components/fullscreen-card';
 import LetterBubbleGraph from '../../components/letters-bubble-graph';
+import LetterPicto from '../../components/letter-picto';
 
 import style from './style';
 
@@ -26,9 +27,11 @@ export default class TutorialSecond extends Component {
     this._changeLetterPlaying(playingId);
   };
 
-  onWordChange = index => {
-    const { sound } = this.words[index];
-    this._changeLetterPlaying(sound);
+  onLetterChange = letter => {
+    if (this.state.selected !== letter) {
+      this.setState({ selected: letter });
+    }
+    // this._changeLetterPlaying(sound);
   };
 
   onEnded = playingId => {
@@ -44,15 +47,17 @@ export default class TutorialSecond extends Component {
     this.setState({ playingId, stopIt: true });
   }
 
-  render({}, { stopIt, playingId }) {
+  render({}, { stopIt, playingId, selected }) {
     return (
       <div class={style.tutorial}>
         <FullscreenCard onClose={() => goTo('/home')}>
-          <h1>Alphabet</h1>
-          <div class={style.picto}>ﺡ</div>
+          {!selected ? <h1>Alphabet</h1> : <LetterPicto letter={selected} />}
+
           <p>
             In this app we will use the web arabic alphabet.
-            <LetterBubbleGraph />
+            <LetterBubbleGraph
+              select={({ value }) => this.onLetterChange(value)}
+            />
           </p>
 
           <div class={style.bottomButton}>

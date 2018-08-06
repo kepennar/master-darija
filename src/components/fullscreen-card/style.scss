@@ -1,3 +1,4 @@
+@import '../../style/animations';
 @import '../../style/colors';
 
 .fullscreenCard {
@@ -10,6 +11,9 @@
   right: 0;
   top: 0;
   z-index: 10;
+}
+.fadeInAnimation {
+  animation: fadeIn 0.5s ease-in-out;
 }
 .cardContent {
   align-self: center;

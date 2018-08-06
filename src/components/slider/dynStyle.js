@@ -1,9 +1,10 @@
 const MIN_SLIDE_WIDTH = 100; // px
 const RESPONSIVE_SLIDE_WIDTH_PERCENT = 70; // %
 const EXCEED_PERCENT = 10; // %
+const MAX_WIDTH = 1080; // px
 
 export const slideStyle = index => {
-  const windowWidth = window.innerWidth;
+  const windowWidth = Math.min(window.innerWidth, MAX_WIDTH);
   const processedWidth = Math.max(
     windowWidth * (RESPONSIVE_SLIDE_WIDTH_PERCENT / 100),
     MIN_SLIDE_WIDTH

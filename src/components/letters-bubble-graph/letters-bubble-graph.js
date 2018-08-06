@@ -56,7 +56,7 @@ const getDatas = selectedNodeId => {
 const width = select('body')
   .node()
   .getBoundingClientRect().width;
-const height = 450;
+const height = 400;
 const centerX = width / 2;
 const centerY = height / 2;
 const periphicalCircleRadius = 20;

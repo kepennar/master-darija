@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     transform-origin: 50% 0;
-    transition: transform .3s ease-out;
+    transition: transform 0.3s ease-out;
   }
 }
 
@@ -16,9 +16,18 @@
   display: flex;
 
   .slideContent {
-    background-color: $secondary-background-color;
+    $transition-duration: 0.4s;
+    transition: background-color$transition-duration ease-in-out,
+      transform$transition-duration ease-in-out;
+    background-color: rgba($secondary-background-color, 0.8);
+    transform: scale(0.9);
     cursor: grabbing;
     height: 60vh;
     padding: 1em;
+
+    &.active {
+      background-color: $secondary-background-color;
+      transform: scale(1);
+    }
   }
 }

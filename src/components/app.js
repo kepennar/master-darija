@@ -11,9 +11,8 @@ import Home from '../routes/home';
 import Words from '../routes/words';
 import Credits from '../routes/credits';
 
+import { getHammer } from '../Hammer';
 import FirstVisitRedirect from './firstVisitRedirect';
-
-const getHammer = () => (typeof window !== 'undefined' ? window.Hammer : null);
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -29,17 +28,19 @@ export default class App extends Component {
     if (this._hammer) {
       this._unregisterHammer();
     }
-    const hammer = getHammer();
-    if (hammer && app) {
-      this._hammer = hammer(app);
-      this._hammer
-        .get('swipe')
-        .set({ direction: Hammer.DIRECTION_RIGHT, domEvents: true });
-      this._hammer.on('swipe', evt => {
-        if (evt.direction === 4) {
-          this.onOpenMenu(true);
+    if (app) {
+      this._hammer = getHammer(
+        app,
+        {
+          direction: Hammer.DIRECTION_RIGHT,
+          domEvents: true
+        },
+        {
+          onSwipeRight: () => {
+            this.onOpenMenu(true);
+          }
         }
-      });
+      );
     }
   };
 

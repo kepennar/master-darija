@@ -4,8 +4,7 @@ import Slide from './slide';
 
 import style from './style';
 import { slideStyle } from './dynStyle';
-
-const _hammer = typeof window !== 'undefined' ? window.Hammer : null;
+import { getHammer } from '../../Hammer';
 
 export default class Slider extends Component {
   constructor(props) {
@@ -17,18 +16,24 @@ export default class Slider extends Component {
     if (this._hammer) {
       this._unregisterHammer();
     }
+
     if (slider) {
-      this._hammer = _hammer(slider);
-      this._hammer
-        .get('swipe')
-        .set({ direction: Hammer.DIRECTION_HORIZONTAL, domEvents: true });
-      this._hammer.on('swipe', evt => {
-        if (evt.direction === 2) {
-          this.nextSlide();
-        } else if (evt.direction === 4) {
-          this.previousSlide();
+      this._hammer = this._hammer = getHammer(
+        slider,
+        {
+          direction: Hammer.DIRECTION_HORIZONTAL,
+          domEvents: true
+        },
+        {
+          onSwipeLeft: () => {
+            this.nextSlide();
+          },
+          onSwipeRight: () => {
+            this.previousSlide();
+          }
         }
-      });
+      );
+
       this._hammer.on('hammer.input', evt => {
         evt.srcEvent.stopPropagation();
       });
@@ -94,8 +99,12 @@ export default class Slider extends Component {
       <div class={style.slider} ref={this.sliderRef}>
         <div class={style.sliderContainer} style={{ transform }}>
           {spacer}
-          {children.map(c => (
-            <Slide index={currentSlideIndex} width={width} margin={margin}>
+          {children.map((c, i) => (
+            <Slide
+              active={currentSlideIndex === i}
+              width={width}
+              margin={margin}
+            >
               {c}
             </Slide>
           ))}

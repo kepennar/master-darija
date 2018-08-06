@@ -12,7 +12,8 @@
     "serve": "preact build && preact serve --port 8888",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "test": "eslint src && preact test",
-    "prettyall": "prettier --single-quote --write \"src/**/*.{js, scss}\""
+    "prettyall": "prettier --single-quote --write \"src/**/*.{js, scss}\"",
+    "bundle:analyze": "preact build --analyze"
   },
   "keywords": [],
   "author": "",

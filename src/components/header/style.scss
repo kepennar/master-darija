@@ -1,17 +1,23 @@
 @import '../../style/_colors';
 
+$flag-width: 105px;
+
 .toolbar {
   .flagSection {
     padding: 0;
+    max-width: $flag-width;
   }
   .flagTitle {
     min-height: 70px;
-    width: 105px;
+    width: $flag-width;
     background: url('../../assets/morroco.svg') no-repeat;
     background-size: cover;
     box-shadow: 1px -1px 4px $morocco-red;
     margin-left: 0 !important;
     cursor: pointer;
+  }
+  .flagElevation {
+    margin: 0;
   }
   .title {
     font-weight: bold;

@@ -1,0 +1,9 @@
+@import '../../style/animations';
+@import '../../style/colors';
+
+.picto {
+  animation: fadeIn 0.7s ease-in-out;
+  font-size: 8em;
+  margin-top: -60px;
+  text-shadow: 6px 8px 8px $txt-color;
+}
