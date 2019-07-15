@@ -1,25 +1,23 @@
-import { h, Component } from 'preact';
-import Drawer from 'preact-material-components/Drawer';
-import MenuItem from './menu-item';
+import { h, Component } from "preact";
+import Drawer from "preact-material-components/Drawer";
+import MenuItem from "./menu-item";
 
-import { Categories } from '../../services';
+import { Categories } from "../../services";
 
-import style from './style';
+import style from "./style";
 
 export default class Menu extends Component {
   drawerRef = drawer => {
     this.drawer = drawer;
   };
+
   componentDidUpdate() {
     this.drawer.MDComponent.open = this.props.open;
   }
   render({ open, onOpenMenu }) {
     return (
       <div>
-        <Drawer.TemporaryDrawer
-          className="mdc-typography mdc-temporary-drawer"
-          ref={this.drawerRef}
-        >
+        <Drawer modal ref={this.drawerRef}>
           <Drawer.DrawerContent>
             <MenuItem
               route="/"
@@ -57,7 +55,7 @@ export default class Menu extends Component {
               onClick={() => onOpenMenu(false)}
             />
           </Drawer.DrawerContent>
-        </Drawer.TemporaryDrawer>
+        </Drawer>
       </div>
     );
   }

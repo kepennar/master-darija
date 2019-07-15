@@ -1,5 +1,5 @@
-@import './colors';
-@import './fonts';
+@import "./colors";
+@import "./fonts";
 
 html,
 body {
@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   background: $background-color;
-  font-family: 'ralewayregular', arial, sans-serif;
+  font-family: "ralewayregular", arial, sans-serif;
   font-weight: 400;
   color: $txt-color;
   -webkit-font-smoothing: antialiased;
@@ -25,11 +25,10 @@ body {
   height: 100%;
 }
 
-@import '~preact-material-components/Button/style';
-@import '~preact-material-components/Card/style';
-@import '~preact-material-components/Drawer/style';
-@import '~preact-material-components/Elevation/style';
-@import '~preact-material-components/IconToggle/style';
-@import '~preact-material-components/LayoutGrid/style';
-@import '~preact-material-components/List/style';
-@import '~preact-material-components/Toolbar/style';
+@import "~preact-material-components/TopAppBar/style.css";
+@import "~preact-material-components/Button/style.css";
+@import "~preact-material-components/Card/style.css";
+@import "~preact-material-components/Drawer/style.css";
+@import "~preact-material-components/Elevation/style.css";
+@import "~preact-material-components/LayoutGrid/style.css";
+@import "~preact-material-components/List/style.css";

@@ -1,31 +1,29 @@
-@import '../../style/_colors';
+@import "../../style/_colors";
 
 $flag-width: 105px;
 
-.toolbar {
-  .flagSection {
-    padding: 0;
-    max-width: $flag-width;
-  }
-  .flagTitle {
-    min-height: 70px;
-    width: $flag-width;
-    background: url('../../assets/morroco.svg') no-repeat;
-    background-size: cover;
-    box-shadow: 1px -1px 4px $morocco-red;
-    margin-left: 0 !important;
-    cursor: pointer;
-  }
-  .flagElevation {
-    margin: 0;
-  }
-  .title {
-    font-weight: bold;
-    font-size: 25px;
-    text-shadow: 1px 1px 5px $morocco-green;
-  }
+.flagSection {
+  padding: 0;
+  max-width: $flag-width;
+}
+.flagTitle {
+  height: 100%;
+  width: $flag-width;
+  background: url("../../assets/morroco.svg") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+}
+.flagElevation {
+  margin: 0;
+  height: 100%;
+}
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 1px 1px 5px $morocco-green;
+}
 
-  a.active {
-    background: rgba(0, 0, 0, 0.4);
-  }
+a.active {
+  background: rgba(0, 0, 0, 0.4);
 }

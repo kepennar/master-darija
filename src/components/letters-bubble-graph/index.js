@@ -1,22 +1,23 @@
-import { h, Component } from 'preact';
+import { h, Component } from "preact";
 
-import style from './style';
+import style from "./style.scss";
 
 export default class LetterBubbleGraph extends Component {
   onChange = datas => {
     const selected = datas.nodes.find(({ id }) => {
-      return id === 'center';
+      return id === "center";
     });
     this.props.select(selected);
   };
 
-  vizRef(svg) {
-    if (typeof window !== 'undefined' && !this.init) {
+  async vizRef(svg) {
+    if (typeof window !== "undefined" && !this.init) {
       const onChange = this.onChange;
-      import('./letters-bubble-graph').then(lettersBubleGraph => {
-        lettersBubleGraph.default(svg, onChange);
-        this.init = true;
-      });
+      const {
+        default: lettersBubleGraph
+      } = await import("./letters-bubble-graph");
+      lettersBubleGraph(svg, onChange);
+      this.init = true;
     }
   }
 
