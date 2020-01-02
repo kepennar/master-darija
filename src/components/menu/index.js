@@ -33,11 +33,11 @@ export default class Menu extends Component {
             />
           </Drawer.DrawerContent>
           <Drawer.DrawerContent>
-            <Drawer.TemporaryDrawerHeader
+            <Drawer.DrawerItem
               className={`mdc-temporary-drawer__header ${style.header}`}
             >
               Categories
-            </Drawer.TemporaryDrawerHeader>
+            </Drawer.DrawerItem>
             {Categories.map(({ label, svg, name }) => (
               <MenuItem
                 route={`/words/${name}`}
