@@ -25,18 +25,18 @@
     "d3-selection": "^1.3.0",
     "d3-transition": "^1.1.1",
     "hammerjs": "^2.0.8",
-    "preact": "^8.4.2",
-    "preact-material-components": "^1.5.8",
-    "preact-router": "^2.6.1"
+    "preact": "^10.1.1",
+    "preact-material-components": "^1.6.1",
+    "preact-router": "^3.1.0"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
-    "firebase-tools": "^7.1.0",
+    "firebase-tools": "^7.11.0",
     "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.4",
     "node-sass": "^4.12.0",
-    "preact-cli": "^3.0.0-rc.1",
+    "preact-cli": "^3.0.0-rc.4",
     "preact-render-to-string": "^4.1.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0"

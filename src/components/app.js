@@ -1,18 +1,18 @@
-import { h, Component } from 'preact';
-import { Router, route as goTo } from 'preact-router';
+import { h, Component } from "preact";
+import { Router, route as goTo } from "preact-router";
 
-import Header from './header';
-import Menu from './menu';
+import Header from "./header";
+import Menu from "./menu";
 
-import TutoFirst from '../routes/tutorial/first';
-import TutoSecond from '../routes/tutorial/second';
+import TutoFirst from "../routes/tutorial/first";
+import TutoSecond from "../routes/tutorial/second";
 
-import Home from '../routes/home';
-import Words from '../routes/words';
-import Credits from '../routes/credits';
+import Home from "../routes/home";
+import Words from "../routes/words";
+import Credits from "../routes/credits";
 
-import { getHammer } from '../Hammer';
-import FirstVisitRedirect from './firstVisitRedirect';
+import { getHammer } from "../Hammer";
+import FirstVisitRedirect from "./firstVisitRedirect";
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -21,7 +21,7 @@ export default class App extends Component {
    */
   constructor(props) {
     super(props);
-    this.state.openMenu = false;
+    this.setState({ openMenu: false });
   }
 
   appRef = app => {
@@ -57,9 +57,9 @@ export default class App extends Component {
   }
 
   onRouteChange = ({ url }) => {
-    if (typeof window !== 'undefined' && window.ga) {
-      window.ga('set', 'page', url);
-      window.ga('send', 'pageview');
+    if (typeof window !== "undefined" && window.ga) {
+      window.ga("set", "page", url);
+      window.ga("send", "pageview");
     }
   };
 
