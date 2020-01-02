@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: ./.github/workflows/build
       - name: Download artifact
         uses: actions/download-artifact@v1
         with:
