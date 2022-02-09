@@ -35,7 +35,7 @@
     "firebase-tools": "^7.11.0",
     "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "preact-cli": "^3.0.0-rc.4",
     "preact-render-to-string": "^4.1.0",
     "prettier": "^1.18.2",
